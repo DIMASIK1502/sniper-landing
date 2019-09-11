@@ -1,0 +1,193 @@
+@media (max-width: 1440px) {
+  .header-section {
+    background-position-x: left, 168%;
+  }
+}
+@media (max-width: 1112px) {
+  .header-section {
+    background-position-x: left, 350%;
+  }
+  .header-section .nav-callback .callback-button {
+    padding-right: 0px;
+    padding-left: 15px;
+    box-shadow: none;
+    background-color: transparent;
+  }
+  .header-section .nav-callback .callback-button .button-content {
+    display: none;
+  }
+  .benefits-section {
+    background-image: url(../../img/benefits-bg.png);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+  }
+  .types-of-training .card-row .row .col-6:last-child {
+    padding-right: 0px;
+  }
+  .types-of-training .card-row .row .col-6:first-child {
+    padding-left: 0px;
+  }
+}
+@media (max-width: 1024px) {
+  .header-section {
+    background-position-x: left, 612px;
+  }
+  .tickets-section .tickets-row {
+    .col-4 {
+      max-width: 50%;
+      flex: 0 0 50%;
+      justify-content: center;
+      display: flex;
+      &:last-child {
+        margin-top: 78px;
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 834px) {
+  .header-section {
+    background-position-x: -78px, 612px;
+  }
+  .hockey-as-effective .row-container.middle .info-panel:not(.end) {
+    margin-left: 0;
+  }
+  .hockey-as-effective .info-wrapper .info-panel .panel-item .item-title {
+    text-align: left;
+  }
+  .hockey-as-effective .info-wrapper .info-panel .panel-item .item-description {
+    text-align: left;
+  }
+  .hockey-as-effective .row-container.small .info-panel:not(.end) {
+    margin-left: 0;
+  }
+  .hockey-as-effective .info-wrapper .info-panel .panel-item {
+    align-items: flex-start;
+  }
+  .hockey-as-effective .info-wrapper .info-panel.end {
+    justify-content: flex-start;
+  }
+  .hockey-as-effective .row-container.small .info-panel {
+    margin-left: 0;
+  }
+  .hockey-as-effective .info-wrapper img {
+    display: none;
+  }
+  .hockey-as-effective .info-wrapper {
+    padding-top: 32px;
+  }
+  .hockey-as-effective .row-container.middle {
+    margin-bottom: 48px;
+  }
+  .benefits-section {
+    margin-top: 78px;
+    padding-top: 42px;
+    padding-bottom: 40px;
+    background-size: cover;
+  }
+  .benefits-section {
+    .benefis-grid {
+      .grid-item {
+        flex: 0 0 50%;
+        max-width: 50%;
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+  .benefits-section .benefis-grid .grid-panel .panel-description {
+    br {
+      display: none;
+    }
+  }
+  .benefits-section .benefis-grid .grid-panel {
+    max-width: 250px;
+  }
+  .types-of-training .card-row:after {
+    content: "";
+  }
+  .types-of-training .card-row .row .col-6:first-child {
+    max-width: 100%;
+    flex: 0 0 100%;
+    justify-content: center;
+    margin-bottom: 88px;
+  }
+
+  .types-of-training .card-row .row .col-6:last-child {
+    max-width: 100%;
+    flex: 0 0 100%;
+    justify-content: center;
+  }
+  .types-of-training {
+    padding-top: 32px;
+  }
+  .header-section .header-nav .row .col-7 {
+    display: none !important;
+  }
+  .header-section .header-nav .row .col-3 {
+    width: auto;
+    padding: 0;
+    flex: none;
+    display: flex;
+    align-items: center;
+    max-width: none;
+  }
+  .header-section .header-nav .row .col-2 {
+    width: auto;
+    padding: 0;
+    flex: none;
+    max-width: none;
+  }
+  .header-section .header-nav .row {
+    justify-content: space-between;
+  }
+  .header-section .header-nav .nav-callback {
+    display: none;
+  }
+  #hamburger-button {
+    display: inline-block !important;
+  }
+}
+@media (max-width: 812px) {
+}
+@media (max-width: 768px) {
+  .treners-section .treners-row .trener-photo.end {
+    justify-content: center;
+  }
+  .treners-section .treners-row .trener-photo.start {
+    justify-content: center;
+  }
+  .treners-section {
+    background-image: url(../../img/treners-bg-right.png);
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: top;
+  }
+  .gallery-section .gallery-img {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+@media (max-width: 736px) {
+  .gallery-section .gallery-header .header-actions {
+    justify-content: flex-start;
+  }
+  .gallery-section .gallery-header .header-actions .action-button {
+    margin-left: 0;
+    margin-right: 16px;
+  }
+}
+@media (max-width: 667px) {
+}
+@media (max-width: 568px) {
+}
+@media (max-width: 414px) {
+}
+@media (max-width: 375px) {
+}
+@media (max-width: 320px) {
+}

@@ -1,0 +1,47 @@
+.benefits-section {
+  margin-top: -128px;
+  padding-top: 312px;
+  padding-bottom: 208px;
+  background-image: url("/img/benefits-bg-top.png"),
+    url("/img/benefits-bg-bottom.png"), url("/img/benefits-bg.png");
+  background-size: auto, auto, 100% calc(100% - 354px);
+  background-repeat: no-repeat;
+  background-position-x: right, left, left;
+  background-position-y: top, bottom, 240px;
+  .section-title {
+    margin-bottom: 72px;
+    font-size: 48px;
+    font-weight: 900;
+    font-family: "OfficinaSansC";
+    color: #1a1a1a;
+    line-height: 60px;
+    text-align: center;
+  }
+  .benefis-grid {
+    .grid-panel {
+      margin-bottom: 16px;
+      text-align: center;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .panel-icon {
+      }
+      .panel-title {
+        margin-top: 28px;
+        margin-bottom: 16px;
+        font-family: "OfficinaSansC";
+        font-size: 18px;
+        font-weight: 900;
+        color: #1a1a1a;
+      }
+      .panel-description {
+        font-family: "OfficinaSansC";
+        color: #86878d;
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 22px;
+      }
+    }
+  }
+}

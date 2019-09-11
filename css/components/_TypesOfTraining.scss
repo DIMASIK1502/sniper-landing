@@ -1,0 +1,179 @@
+.types-of-training {
+  padding-bottom: 186px;
+  .section-title {
+    margin-bottom: 72px;
+    font-size: 48px;
+    font-weight: 900;
+    font-family: "OfficinaSansC";
+    color: #1a1a1a;
+    line-height: 60px;
+    text-align: center;
+  }
+  .card-row {
+    position: relative;
+    &:after {
+      top: 0;
+      content: "&";
+      font-weight: 900;
+      z-index: 0;
+      font-size: 308px;
+      font-family: "OfficinaSansC";
+      color: #f3f4f8;
+      position: absolute;
+      width: 100%;
+      text-align: center;
+    }
+    .row .col-6 {
+      display: flex;
+      &:first-child{
+        padding-left: 32px;
+        justify-content: flex-start;
+      }
+      &:last-child{
+        justify-content: flex-end;
+        padding-right: 32px;
+      }
+    }
+    .info-card {
+      z-index: 2;
+      width: 430px;
+      border-radius: 20px;
+      background-color: white;
+      box-shadow: 0px 0px 22.5px 2.5px rgba(43, 52, 60, 0.15);
+      display: flex;
+      flex-direction: column;
+      .card-header {
+        box-shadow: 0px 0px 22.5px 2.5px rgba(11, 125, 236, 0.23);
+        position: relative;
+        img {
+          position: absolute;
+          left: 48px;
+        }
+        span {
+          font-size: 18px;
+          font-weight: 900;
+          display: block;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          color: white;
+          font-family: "OfficinaSansC";
+        }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 70px;
+        width: 100%;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        background: rgba(82, 108, 215, 1);
+        background: -moz-linear-gradient(
+          45deg,
+          rgba(82, 108, 215, 1) 0%,
+          rgba(116, 148, 224, 1) 100%
+        );
+        background: -webkit-gradient(
+          left bottom,
+          right top,
+          color-stop(0%, rgba(82, 108, 215, 1)),
+          color-stop(100%, rgba(116, 148, 224, 1))
+        );
+        background: -webkit-linear-gradient(
+          45deg,
+          rgba(82, 108, 215, 1) 0%,
+          rgba(116, 148, 224, 1) 100%
+        );
+        background: -o-linear-gradient(
+          45deg,
+          rgba(82, 108, 215, 1) 0%,
+          rgba(116, 148, 224, 1) 100%
+        );
+        background: -ms-linear-gradient(
+          45deg,
+          rgba(82, 108, 215, 1) 0%,
+          rgba(116, 148, 224, 1) 100%
+        );
+        background: linear-gradient(
+          45deg,
+          rgba(82, 108, 215, 1) 0%,
+          rgba(116, 148, 224, 1) 100%
+        );
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#526cd7', endColorstr='#7494e0', GradientType=1 );
+      }
+      .card-body {
+        padding: 28px 42px;
+        .list {
+          display: flex;
+          flex-direction: column;
+          .list-item {
+            align-items: flex-start;
+            display: flex;
+            &:not(:last-child) {
+              margin-bottom: 20px;
+            }
+            .item-icon {
+              margin-right: 16px;
+              border: 1px solid rgba($color: #1a1a1a, $alpha: 0.33);
+              width: 24px;
+              min-width: 24px;
+              height: 24px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border-radius: 12px;
+              span {
+                display: block;
+                font-family: "OfficinaSansC";
+                font-size: 12px;
+                color: rgba($color: #1a1a1a, $alpha: 0.66);
+                font-weight: normal;
+              }
+            }
+            span {
+              display: block;
+              color: #1a1a1a;
+              font-weight: normal;
+              font-family: "OfficinaSansC";
+              line-height: 24px;
+            }
+          }
+        }
+      }
+      .card-footer {
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        position: relative;
+        background-color: white;
+        border-top: 1px solid #f3f4f8;
+        padding: 24px 36px;
+        padding-bottom: 56px;
+        .footer-description {
+          color: #86878d;
+          font-size: 16px;
+          line-height: 24px;
+          font-family: "OfficinaSansC";
+          font-weight: normal;
+        }
+        .footer-button {
+          cursor: pointer;
+          position: absolute;
+          bottom: -32.5px;
+          left: 32px;
+          width: calc(100% - 64px);
+          &:focus {
+            outline: none;
+          }
+          border: none;
+          height: 65px;
+          background-color: #fece0c;
+          border-radius: 32.5px;
+          font-size: 16px;
+          font-weight: bold;
+          color: #1a1a1a;
+          font-family: "OfficinaSansC";
+          letter-spacing: 1px;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}

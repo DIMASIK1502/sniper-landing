@@ -1,0 +1,77 @@
+.hockey-as-effective {
+  position: relative;
+  margin-top: -320px;
+  .section-title {
+    font-family: "OfficinaSansC";
+    font-weight: 900;
+    font-size: 48px;
+    color: #1a1a1a;
+    line-height: 60px;
+  }
+  .row-container {
+    &.middle {
+      max-width: 1088px;
+      margin-left: 32px;
+
+      margin: 0 auto;
+      .info-panel {
+        &:not(.end) {
+          margin-left: 32px;
+        }
+      }
+    }
+    &.small {
+      max-width: 761px;
+      margin: 0 auto;
+      .info-panel {
+        margin-left: 32px;
+
+        &:not(.end) {
+          margin-left: 64px;
+        }
+
+        &.end {
+          justify-content: flex-start;
+        }
+      }
+    }
+  }
+  .info-wrapper {
+    padding-top: 388px;
+    img {
+      top: 188px;
+      position: absolute;
+      left: calc(50% - 284px);
+    }
+
+    .info-panel {
+      display: flex;
+      &.end {
+        justify-content: flex-end;
+      }
+      width: 100%;
+      .panel-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .item-title {
+          font-weight: 900;
+          color: #1a1a1a;
+          line-height: 24px;
+          font-size: 18px;
+          text-align: center;
+          font-family: "OfficinaSansC";
+          display: block;
+        }
+        .item-description {
+          font-size: 16px;
+          color: #86878d;
+          line-height: 22px;
+          text-align: center;
+          font-family: "OfficinaSansC";
+          display: block;
+        }
+      }
+    }
+  }
+}

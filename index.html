@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./css/utils/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/utils/swiper.min.css" />
+    <link rel="stylesheet" href="./css/utils/lightgallery.min.css" />
+    <link rel="stylesheet" href="./css/utils/lg-transitions.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="slide-panel"></div>
+    <header class="header-section">
+      <div class="container">
+        <div class="header-nav">
+          <div class="row">
+            <div class="col-2">
+              <div class="nav-logo">
+                <div>
+                  <img alt="Логотип" class="img-fluid" src="./img/logo.png" />
+                </div>
+              </div>
+            </div>
+            <div class="col-7 d-flex align-items-center">
+              <div class="nav-menu">
+                <a class="menu-link">Преимущества</a>
+                <a class="menu-link">Виды тренировок</a>
+                <a class="menu-link">Тренеры</a>
+                <a class="menu-link">Абонементы</a>
+                <a class="menu-link">Отзывы</a>
+                <a class="menu-link">Галерея</a>
+                <a class="menu-link">Контакты</a>
+              </div>
+            </div>
+            <div class="col-3">
+              <button id="hamburger-button">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+              <div class="nav-callback">
+                <button class="callback-button">
+                  <div class="button-icon">
+                    <i class="fas fa-phone"></i>
+                  </div>
+                  <div class="button-content">
+                    <span class="content-phone">+7 (987) 013-03-67</span>
+                    <span class="content-subtitle">Заказать звонок</span>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header-preview">
+          <h1 class="preview-title">
+            Хоккейная школа<br />
+            «Снайпер»
+          </h1>
+          <div class="preview-list">
+            <div class="list-item">
+              <div class="item-icon">
+                <i class="fas fa-check"></i>
+              </div>
+              <span>
+                Подготовка хоккеистов различного уровня
+              </span>
+            </div>
+            <div class="list-item">
+              <div class="item-icon">
+                <i class="fas fa-check"></i>
+              </div>
+              <span>
+                Индивидуальный подход
+              </span>
+            </div>
+            <div class="list-item">
+              <div class="item-icon">
+                <i class="fas fa-check"></i>
+              </div>
+              <span>
+                Постановка на коньки от 3-х лет
+              </span>
+            </div>
+          </div>
+          <button class="preview-button">
+            Записаться на бесплатное занятие
+          </button>
+          <div class="social-links">
+            <a class="links-item">
+              <i class="fab fa-vk"></i>
+            </a>
+            <a class="links-item">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a class="links-item">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="hockey-as-effective">
+      <div class="container">
+        <h1 class="section-title">
+          Хоккей как эффективное<br />
+          средство развития ребенка:
+        </h1>
+        <div class="info-wrapper">
+          <img class="img-fluid" src="./img/hockey-as-effective.png" />
+          <div class="row-container middle">
+            <div class="row no-gutters">
+              <div class="col-6">
+                <div class="info-panel ">
+                  <div class="panel-item">
+                    <h4 class="item-title">
+                      Благотворное влияние на<br />
+                      сердечно-сосудистую<br />
+                      и дыхательную систему
+                    </h4>
+                    <span class="item-description">
+                      Хоккейные тренировки обладают<br />
+                      высокой интенсивностью, что<br />
+                      позволяет развивать основные<br />
+                      системы организма
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="info-panel end">
+                  <div class="panel-item">
+                    <h4 class="item-title">
+                      Улучшение коммуникативных<br />
+                      способностей и уверенности<br />
+                      в себе
+                    </h4>
+                    <span class="item-description">
+                      Нахождение ребенка в коллективе<br />
+                      способствует развитию его<br />
+                      коммуникативных качеств<br />
+                      а при помощи тренеров ребенок<br />
+                      научится достигать поставленных<br />
+                      задач, тем самым, приобретая <br />уверенность в себе
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row-container small">
+            <div class="row no-gutters ">
+              <div class="col-6">
+                <div class="info-panel ">
+                  <div class="panel-item">
+                    <h4 class="item-title">
+                      Воздействие<br />
+                      на телосложение
+                    </h4>
+                    <span class="item-description">
+                      За счет глобального включения<br />
+                      мышечных групп во время тренировки,<br />
+                      а также дозированной силовой<br />
+                      нагрузки, увеличивается мышечная<br />
+                      масса , что делает телосложение<br />
+                      более атлетичным и крепким
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="info-panel end ">
+                  <div class="panel-item">
+                    <h4 class="item-title">Закаливание организма</h4>
+                    <span class="item-description">
+                      Пребывание в условиях льда<br />
+                      способствует повышению<br />
+                      сопротивляемости к респираторным<br />
+                      заболеваниям
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="benefits-section">
+      <div class="container">
+        <h1 class="section-title">Преимущества нашей школы:</h1>
+        <div class="benefis-grid">
+          <div class="row no-gutters">
+            <div class="col-4 grid-item">
+              <div class="grid-panel">
+                <div>
+                  <div class="panel-icon">
+                    <img class="img-fluid" src="./img/benefits1.png" />
+                  </div>
+                  <h4 class="panel-title">
+                    Тренерский штаб высокой компетенции
+                  </h4>
+                  <p class="panel-description">
+                    Тренеры школы имеют профильное образование<br />
+                    опыт игры, а также ряд публикаций по<br />
+                    тематике детского и любительского хоккея
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-4 grid-item">
+              <div class="grid-panel">
+                <div>
+                  <div class="panel-icon">
+                    <img class="img-fluid" src="./img/benefits2.png" />
+                  </div>
+                  <h4 class="panel-title">Современная методика тренировок</h4>
+                  <p class="panel-description">
+                    При построении тренировочного процесса за основу<br />
+                    берется Национальная программа подготовки<br />
+                    хоккеистов, выпущенная Федерацией<br />
+                    хоккея России в 2018 году
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-4 grid-item">
+              <div class="grid-panel">
+                <div>
+                  <div class="panel-icon">
+                    <img class="img-fluid" src="./img/benefits3.png" />
+                  </div>
+                  <h4 class="panel-title">Занятия рядом с домом</h4>
+                  <p class="panel-description">
+                    Тренировочные площадки подбираются<br />
+                    с учетом пожеланий клиента по месту<br />
+                    и времени проведения занятий
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="grid-item col-6">
+              <div class="grid-panel">
+                <div>
+                  <div class="panel-icon">
+                    <img class="img-fluid" src="./img/benefits4.png" />
+                  </div>
+                  <h4 class="panel-title">Гибкая система цен</h4>
+                  <p class="panel-description">
+                    Система абонементов поможет подобрать наиболее<br />
+                    подходящий для Вас вариант по цене и количеству<br />
+                    занятий в месяц, а первое занятие<br />
+                    будет бесплатным
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="grid-item col-6">
+              <div class="grid-panel">
+                <div>
+                  <div class="panel-icon">
+                    <img class="img-fluid" src="./img/benefits5.png" />
+                  </div>
+                  <h4 class="panel-title">Разнообразие видов тренировок</h4>
+                  <p class="panel-description">
+                    В нашей школые проводятся как групповые, так<br />
+                    и индивидуальные занятия на льду; тренировки<br />
+                    по ОФП, дриблингу
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="types-of-training">
+      <div class="container">
+        <h1 class="section-title">Виды тренировок</h1>
+        <div class="card-row">
+          <div class="row no-gutters">
+            <div class="col-6">
+              <div class="info-card">
+                <div class="card-header">
+                  <img src="./img/player.png" class="img-fluid" />
+                  <span>Индивидуальные</span>
+                </div>
+                <div class="card-body">
+                  <div class="list">
+                    <div class="list-item">
+                      <div class="item-icon">
+                        <span>
+                          1
+                        </span>
+                      </div>
+                      <span> Обучение технике катания на коньках</span>
+                    </div>
+                    <div class="list-item">
+                      <div class="item-icon">
+                        <span>
+                          2
+                        </span>
+                      </div>
+                      <span>Обучение технике владения клюшкой</span>
+                    </div>
+                    <div class="list-item">
+                      <div class="item-icon">
+                        <span>
+                          3
+                        </span>
+                      </div>
+                      <span
+                        >Исправление индивидуальных ошибок и погрешностей в
+                        технике</span
+                      >
+                    </div>
+                    <div class="list-item">
+                      <div class="item-icon">
+                        <span>
+                          4
+                        </span>
+                      </div>
+                      <span
+                        >Формирование правильного двигательного стереотипа</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <span class="footer-description">
+                    Больше подходит на начальном этапе подготовки<br />
+                    либо для более детальной работы над техникой
+                  </span>
+                  <button class="footer-button">Записаться на занятие</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="info-card">
+                <div class="card-header">
+                  <img src="./img/player-group.png" class="img-fluid" />
+                  <span>Групповые</span>
+                </div>
+                <div class="card-body">
+                  <div class="list">
+                    <div class="list-item">
+                      <div class="item-icon">
+                        <span>
+                          1
+                        </span>
+                      </div>
+                      <span>Обучение отбору и укрыванию шайбы</span>
+                    </div>
+                    <div class="list-item">
+                      <div class="item-icon">
+                        <span>
+                          2
+                        </span>
+                      </div>
+                      <span>Изучение техники ведения единоборств</span>
+                    </div>
+                    <div class="list-item">
+                      <div class="item-icon">
+                        <span>
+                          3
+                        </span>
+                      </div>
+                      <span
+                        >Обучение групповым тактическим взаимодействиям</span
+                      >
+                    </div>
+                    <div class="list-item">
+                      <div class="item-icon">
+                        <span>
+                          4
+                        </span>
+                      </div>
+                      <span>Игровая практика</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <span class="footer-description">
+                    Эффективны на этапе углубленной специализации,<br />
+                    когда изучены основы техники передвижения и есть<br />
+                    недочеты в тактической подготовке
+                  </span>
+                  <button class="footer-button">Записаться на занятие</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="treners-section">
+      <div class="treners-wrapper">
+        <div class="container container-full">
+          <h1 class="section-title">Тренеры</h1>
+          <div class="treners-row row no-gutters">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 order-1 order-sm-1 order-md-0 order-xl-0 order-lg-0">
+              <div class="trener-info">
+                <h4 class="info-title">Напалков К.С.</h4>
+                <p class="info-subtitle">
+                  Выпускник РГУФКСМиТ кафедра теории и методики хоккея
+                </p>
+                <span class="info-label">Игровой опыт:</span>
+                <span class="info-p">
+                  участник Первенства России среди юношей 1996 г.р.<br />
+                  в команде «Мордовия» г.Саранск.
+                </span>
+
+                <span class="info-label"> Автор научных статей:</span>
+                <span class="info-p">
+                  - В журнале «Молодой ученый» на тему: «Состояние массового<br />
+                  хоккея в России и пути его дальнейшего развития».
+                </span>
+                <span class="info-p">
+                  - В журнале «ФК:ВОТ» на тему: «Применение Национальной
+                  программы подготовки в тренировке юных спортсменов».
+                </span>
+                <span class="info-p">
+                  Участие в конференции «Студенческая наука» с докладом <br />
+                  на тему:«Использование подвижных игр для оценк<br />
+                  соревновательной деятельности юных хоккеистов»
+                </span>
+                <div class="info-contact">
+                  <div class="contact-vk">
+                    <i class="fab fa-vk"></i>
+                  </div>
+                  <div class="contact-phone">
+                    <span>+7 (900) 687-56-65</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 order-0 order-sm-0 order-md-1 order-xl-1 order-lg-1  justify-content-center justify-content-sm-center justify-content-md-end justify-content-lg-end justify-content-xl-end"
+            >
+              <div class="trener-photo end">
+                <div>
+                  <img class="img-fluid" src="./img/trener1.png" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="treners-row row no-gutters ">
+            <div
+              class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6  justify-content-center justify-content-sm-center justify-content-md-start justify-content-lg-start justify-content-xl-start d-flex align-items-center"
+            >
+              <div class="trener-photo start">
+                <div>
+                  <img class="img-fluid" src="./img/trener2.png" />
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-flex justify-content-start justify-content-sm-start justify-content-md-end justify-content-lg-end justify-content-xl-end "
+            >
+              <div class="trener-info">
+                <h4 class="info-title">Алексей Дворников</h4>
+                <p class="info-subtitle">
+                  <span class="info-p"
+                    >Является выпускником ДЮШС Витязь (г. Чехов)<br />
+                    Выпускник РГУФКСМиТ кафедры Теории и методики хоккея<br />
+                    им.А. Тарасова с (2015-2019)
+                  </span>
+                  <span class="info-p"
+                    >Принимал участие в конференция посвящённых развитию<br />
+                    детско-юношеского хоккея.</span
+                  >
+                  <span class="info-p"
+                    >Принимал участие в тестировании игроков для разработки
+                    нового<br />
+                    Федерального стандарта по виду спорта хоккей.</span
+                  >
+                </p>
+                <span class="info-label"> Хоккейная карьера :</span>
+                <span class="info-p">
+                  1. «Русичи» г.Владимир (2010-2013)<br />
+                  Трехкратный чемпион Владимирской области.<br />
+                  Чемпион в первенстве «Золотое кольцо России»по хоккею с
+                  шайбой.<br />
+                  Призёр турниров «Золотая шайба»<br />
+                  Участие в финальном турнире «золотая шайба»
+                </span>
+
+                <span class="info-p">
+                  2. «Витязь» г.Чехов (2013-2015)<br />
+                  Призёр открытого первенства московской области по хоккею.<br />
+                  Участие в юниорской хоккейной лиге (2014-2015)
+                </span>
+                <span class="info-p">
+                  3. «Олимпийский» г.Рязань (2015-2016) открытое первенство<br />
+                  московской области ЮХЛ.Первое место.
+                </span>
+                <span class="info-p"
+                  >4. Участник всероссийский финалов ЮХЛ</span
+                >
+                <div class="info-contact">
+                  <div class="contact-vk">
+                    <i class="fab fa-vk"></i>
+                  </div>
+                  <div class="contact-phone">
+                    <span>+7 (900) 687-56-65</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="tickets-section">
+      <div class="container">
+        <h1 class="section-title">Абонементы</h1>
+        <div class="row tickets-row">
+          <div class="col-4">
+            <div class="ticket-card">
+              <div class="card_header">
+                <span>Разовое занятие</span>
+              </div>
+              <div class="card_body">
+                <div class="body-title">
+                  <span class="price">1200</span>
+                  <i class="fal fa-ruble-sign"></i>
+                </div>
+              </div>
+              <div class="card_footer">
+                <button class="footer-button">Записаться на занятие</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="ticket-card">
+              <div class="card_header">
+                <span>Абонемент на 4 занятия</span>
+              </div>
+              <div class="card_body">
+                <div class="body-title">
+                  <span class="price">4500</span>
+                  <i class="fal fa-ruble-sign"></i>
+                </div>
+                <div class="body-subtitle">
+                  <span>*1 занятие-1125</span>
+                  <i class="fal fa-ruble-sign"></i>
+                </div>
+              </div>
+              <div class="card_footer">
+                <button class="footer-button">Записаться на занятие</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="ticket-card">
+              <div class="card_header">
+                <span>Абонемент на 8 занятий</span>
+              </div>
+              <div class="card_body">
+                <div class="body-title">
+                  <span class="price">8000</span>
+                  <i class="fal fa-ruble-sign"></i>
+                </div>
+                <div class="body-subtitle">
+                  <span>*1 занятие-1000</span>
+                  <i class="fal fa-ruble-sign"></i>
+                </div>
+              </div>
+              <div class="card_footer">
+                <button class="footer-button">Записаться на занятие</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="gallery-section">
+      <div class="container">
+        <div class="gallery-header">
+          <h1 class="header-title">Галерея</h1>
+          <div class="header-actions">
+            <button class="action-button">Все</button>
+            <button class="action-button">Персональные</button>
+            <button class="action-button active">Групповые</button>
+          </div>
+        </div>
+      </div>
+      <div id="aniimated-thumbnials" data-responsive="img/1-375.jpg 375, img/1-480.jpg 480, img/1-757.jpg 757" class="row no-gutters">
+        <a class="gallery-img" href="img/p1.png">
+          <img class="img-fluid" src="img/p1.png" />
+        </a>
+        <a class="gallery-img" href="img/p2.png">
+          <img class="img-fluid" src="img/p2.png" />
+        </a>
+        <a class="gallery-img" href="img/p3.png">
+          <img class="img-fluid" src="img/p3.png" />
+        </a>
+        <a class="gallery-img" href="img/p4.png">
+          <img class="img-fluid" src="img/p4.png" />
+        </a>
+        <a class="gallery-img" href="img/p5.png">
+          <img class="img-fluid" src="img/p5.png" />
+        </a>
+        <a class="gallery-img"  href="img/p6.png">
+          <img class="img-fluid" src="img/p6.png" />
+        </a>
+        <a class="gallery-img" href="img/p7.png">
+          <img class="img-fluid" src="img/p7.png" />
+        </a>
+        <a class="gallery-img" href="img/p8.png">
+          <img class="img-fluid" src="img/p8.png" />
+        </a>
+        <a class="gallery-img " href="img/p9.png">
+          <img class="img-fluid" src="img/p9.png" />
+        </a>
+        <a class="gallery-img" href="img/p10.png">
+          <img class="img-fluid" src="img/p10.png" />
+        </a>
+      </div>
+    </section>
+    <section class="feedback-section">
+      <div class="container">
+        <div id="inst" class="row"></div>
+      </div>
+    </section>
+    <footer>
+      <section class="contacts-section">
+        <div class="container">
+          <h1 class="section-title">Контактная информация</h1>
+          <div class="contacts-row row">
+            <div class="d-lg-flex d-lg-flex d-md-flex d-sm-none d-none col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+              <div class="logo">
+                <img class="img-fluid" src="./img/logo-big.png" />
+              </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 col-8">
+              <div class="row">
+                <div class="col-6">
+                  <div class="contacts-info">
+                    <span class="info-label">Мы в социальных сетях</span>
+                    <div class="info-socials">
+                      <a class="socials-link">
+                        <i class="fab fa-vk"></i>
+                      </a>
+                      <a class="socials-link">
+                        <i class="fab fa-instagram"></i>
+                      </a>
+                      <a class="socials-link">
+                        <i class="fab fa-youtube"></i>
+                      </a>
+                    </div>
+                    <p class="info-p"></p>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="contacts-info">
+                    <span class="info-label">Наш E-mail</span>
+                    <a class="info-mail">sniper@mail.com</a>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="contacts-info">
+                    <span class="info-label">Адреса катков</span>
+                    <p class="info-p">
+                      Реутов арена, Айс Парк (проф.+рязан.),<br />
+                      ТЦ город, Локомотив, шоссе энтузиастов,<br />
+                      Альпийский лед, Москворечье, Вершина,<br />
+                      Европейский, Никольское
+                    </p>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="contacts-info">
+                    <span class="info-label">Наш телефон</span>
+                    <p class="info-phone">
+                      +7 (987) 013-03-67
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </footer>
+  </body>
+  <script src="./js/libs/jquery.js"></script>
+  <script src="./js/libs/lightgallery.min.js"></script>
+  <script src="/js/libs/lg-thumbnail.min.js"></script>
+  <script src="./js/libs/lg-zoom.min.js"></script>
+  <script src="./js/libs/bootstrap.min.js"></script>
+  <script src="./js/libs/swiper.min.js"></script>
+  <script src="./js/libs/instafeed.min.js"></script>
+
+  <script src="./js/script.js"></script>
+</html>

@@ -1,0 +1,137 @@
+.tickets-section {
+  .section-title {
+    text-align: center;
+    font-family: "OfficinaSansC";
+    font-weight: 900;
+    font-size: 48px;
+    color: #1a1a1a;
+    line-height: 60px;
+    margin-bottom: 48px;
+    margin-top: 32px;
+  }
+  .tickets-row {
+    .ticket-card {
+      border-radius: 20px;
+      background-color: white;
+      box-shadow: 0px 0px 22.5px 2.5px rgba(43, 52, 60, 0.15);
+      display: flex;
+      flex-direction: column;
+      .card_header {
+        box-shadow: 0px 0px 22.5px 2.5px rgba(11, 125, 236, 0.23);
+        position: relative;
+        span {
+          font-size: 18px;
+          font-weight: 900;
+          display: block;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          color: white;
+          font-family: "OfficinaSansC";
+        }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 70px;
+        width: 100%;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        background: rgba(82, 108, 215, 1);
+        background: -moz-linear-gradient(
+          45deg,
+          rgba(82, 108, 215, 1) 0%,
+          rgba(116, 148, 224, 1) 100%
+        );
+        background: -webkit-gradient(
+          left bottom,
+          right top,
+          color-stop(0%, rgba(82, 108, 215, 1)),
+          color-stop(100%, rgba(116, 148, 224, 1))
+        );
+        background: -webkit-linear-gradient(
+          45deg,
+          rgba(82, 108, 215, 1) 0%,
+          rgba(116, 148, 224, 1) 100%
+        );
+        background: -o-linear-gradient(
+          45deg,
+          rgba(82, 108, 215, 1) 0%,
+          rgba(116, 148, 224, 1) 100%
+        );
+        background: -ms-linear-gradient(
+          45deg,
+          rgba(82, 108, 215, 1) 0%,
+          rgba(116, 148, 224, 1) 100%
+        );
+        background: linear-gradient(
+          45deg,
+          rgba(82, 108, 215, 1) 0%,
+          rgba(116, 148, 224, 1) 100%
+        );
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#526cd7', endColorstr='#7494e0', GradientType=1 );
+      }
+      .card_body {
+        height: 170px;
+        padding: 28px 42px;
+        .body-title {
+          text-align: center;
+          .price {
+            font-size: 60px;
+            color: #1a1a1a;
+            font-family: "OfficinaSansC";
+            font-weight: 900;
+          }
+          i {
+            font-size: 60px;
+            color: #1a1a1a;
+          }
+        }
+        .body-subtitle {
+          text-align: center;
+          color: #5470d8;
+          font-size: 18px;
+          span {
+            font-family: "OfficinaSansC";
+            font-weight: normal;
+          }
+        }
+      }
+      .card_footer {
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        position: relative;
+        background-color: white;
+        padding: 0px 36px;
+        padding-bottom: 22px;
+        .footer-button {
+          cursor: pointer;
+          position: absolute;
+          bottom: -32.5px;
+          left: 32px;
+          width: calc(100% - 64px);
+          &:focus {
+            outline: none;
+          }
+          border: none;
+          height: 65px;
+          background-color: #fece0c;
+          border-radius: 32.5px;
+          font-size: 16px;
+          font-weight: bold;
+          color: #1a1a1a;
+          font-family: "OfficinaSansC";
+          letter-spacing: 1px;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
+#aniimated-thumbnials {
+  max-width: 100%;
+  flex-wrap: wrap;
+  display: flex;
+  a{
+      flex: 0 0 16.6%;
+      max-width: 16.6%;
+  }
+}

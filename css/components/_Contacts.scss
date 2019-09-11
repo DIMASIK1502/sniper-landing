@@ -1,0 +1,48 @@
+.contacts-section {
+  padding-top: 64px;
+  .section-title {
+    font-family: "OfficinaSansC";
+    font-weight: 900;
+    font-size: 48px;
+    color: #1a1a1a;
+    line-height: 60px;
+    text-align: center;
+    margin-bottom: 96px;
+  }
+  .contacts-row {
+    .contacts-info {
+      margin-bottom: 32px;
+      display: flex;
+      flex-direction: column;
+      .info-label {
+        font-weight: bold;
+        display: block;
+        color: #86878d;
+        font-size: 16px;
+        font-weight: normal;
+        font-family: "OfficinaSansC";
+      }
+      .info-p {
+        margin-top: 8px;
+        font-size: 18px;
+        color: #1a1a1a;
+        font-family: "OfficinaSansC";
+      }
+      .info-mail,
+      .info-phone {
+        font-weight: bold;
+        font-size: 30px;
+        color: #1a1a1a;
+        font-family: "OfficinaSansC";
+      }
+      .info-socials {
+        .socials-link {
+          i {
+            font-size: 30px;
+            color: #1a1a1a;
+          }
+        }
+      }
+    }
+  }
+}
