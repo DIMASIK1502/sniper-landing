@@ -50,6 +50,12 @@
 }
 
 @media (max-width: 834px) {
+  #aniimated-thumbnials {
+    .gallery-img {
+      flex: 0 0 25%;
+      max-width: 25%;
+    }
+  }
   .header-section {
     background-position-x: -78px, 612px;
   }
@@ -167,9 +173,11 @@
     background-position-x: right;
     background-position-y: top;
   }
-  .gallery-section .gallery-img {
-    flex: 0 0 50%;
-    max-width: 50%;
+  #aniimated-thumbnials {
+    .gallery-img {
+      flex: 0 0 33.333%;
+      max-width: 33.333%;
+    }
   }
 }
 @media (max-width: 736px) {
@@ -180,12 +188,102 @@
     margin-left: 0;
     margin-right: 16px;
   }
+  .treners-section {
+    background-image: none;
+  }
 }
 @media (max-width: 667px) {
+  .benefits-section .benefis-grid .grid-item {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+  .header-section .header-nav .row {
+    padding: 0 16px;
+  }
 }
 @media (max-width: 568px) {
+  .header-section .header-preview .preview-button {
+    padding: 0 16px;
+    width: auto;
+  }
+  #aniimated-thumbnials {
+    .gallery-img {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+  .tickets-section .tickets-row {
+    .col-4 {
+      max-width: 100%;
+      flex: 0 0 100%;
+      margin-bottom: 64px;
+      &:last-child {
+        margin-top: 0;
+      }
+    }
+  }
+  .header-section .header-preview .preview-list .list-item .item-icon {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+  }
+  .header-section .header-preview .preview-title {
+    font-size: 48px;
+    line-height: 48px;
+  }
+  .benefits-section .section-title {
+    font-size: 38px;
+    line-height: 38px;
+  }
+
+  .header-section .header-preview .preview-list .list-item span {
+    font-size: 20px;
+  }
 }
 @media (max-width: 414px) {
+  .types-of-training .card-row .info-card .card-header img {
+    display: none;
+  }
+  .types-of-training .card-row .info-card .card-footer .footer-description {
+    br {
+      display: none;
+    }
+  }
+  .treners-section .treners-row .trener-info .info-contact {
+    flex-wrap: wrap;
+  }
+  #aniimated-thumbnials {
+    .gallery-img {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+  .hockey-as-effective .section-title {
+    font-size: 38px;
+    line-height: 38px;
+    br {
+      display: none;
+    }
+  }
+  .treners-section .treners-row .trener-info .info-contact .contact-vk {
+    margin-right: 0;
+    width: auto;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .treners-section .treners-row .trener-info .info-contact .contact-phone {
+    margin-top: 16px;
+    flex: 0 0 100%;
+    max-width: 100%;
+    width: auto;
+  }
+  .gallery-section .gallery-header .header-actions {
+    flex-wrap: wrap;
+  }
+
+  .gallery-section .gallery-header .header-actions .action-button {
+    margin-bottom: 16px;
+  }
 }
 @media (max-width: 375px) {
 }
