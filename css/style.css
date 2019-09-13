@@ -19,6 +19,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "OfficinaSansBookC";
+  src: url("../fonts/OfficinaSansBookC.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .header-section {
   padding-top: 32px;
   padding-bottom: 508px;
@@ -1065,6 +1072,31 @@
 }
 
 @media (max-width: 1024px) {
+  #sign-up-modal .modal-dialog .modal-content .form-title {
+    margin-left: 0;
+  }
+  #sign-up-modal .modal-dialog .modal-content .form-subtitle {
+    margin-left: 0;
+  }
+  #sign-up-modal .modal-dialog .modal-content .form-content {
+    margin-left: 0;
+    padding-left: 0;
+  }
+  #sign-up-modal .modal-dialog .modal-content .row .col-6 {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    max-width: 100%;
+  }
+  #sign-up-modal .modal-dialog .modal-content .row .col-6:last-child {
+    display: none !important;
+  }
   .header-section {
     background-position-x: left, 612px;
   }
@@ -1273,6 +1305,12 @@
 }
 
 @media (max-width: 568px) {
+  #sign-up-modal .modal-dialog .modal-content .form-title br {
+    display: none;
+  }
+  #sign-up-modal .modal-dialog .modal-content .form-subtitle br {
+    display: none;
+  }
   .header-section .header-preview .preview-button {
     padding: 0 16px;
     width: auto;
@@ -9977,6 +10015,187 @@ readers do not read off random characters that represent icons */
   font-weight: 300;
 }
 
+#up-button {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  background-color: #fece0c;
+  border: none;
+  z-index: 50;
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+#up-button:hover {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  background-color: #fed83f;
+}
+
+#up-button:focus {
+  outline: none;
+}
+
+.modal-content {
+  border-radius: 20px;
+  border: none;
+  background-color: white;
+  -webkit-box-shadow: -10px -6px 54px 0px rgba(37, 43, 58, 0.15);
+          box-shadow: -10px -6px 54px 0px rgba(37, 43, 58, 0.15);
+  padding: 32px 32px;
+}
+
+.modal-content .form-title {
+  color: #1a1a1a;
+  font-weight: 900;
+  font-family: "OfficinaSansC";
+  font-size: 39px;
+  margin-left: 32px;
+}
+
+.modal-content .form-subtitle {
+  color: #3d1914;
+  font-family: "OfficinaSansBookC";
+  font-size: 24px;
+  line-height: 30px;
+  margin-left: 32px;
+  margin-bottom: 32px;
+}
+
+.modal-content .form-content {
+  padding-left: 32px;
+}
+
+.modal-content .form-content .form-agree .agree-check .checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.modal-content .form-content .form-agree .agree-check .checkbox + label {
+  margin-top: 24px;
+  position: relative;
+  padding: 0 0 0 32px;
+  cursor: pointer;
+}
+
+.modal-content .form-content .form-agree .agree-check .checkbox + label span {
+  font-size: 18px;
+  font-family: "OfficinaSansBookC";
+  color: rgba(94, 130, 219, 0.66);
+  display: block;
+  margin-top: -3px;
+}
+
+.modal-content .form-content .form-agree .agree-check .checkbox + label:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: #5e82db;
+}
+
+.modal-content .form-content .form-agree .agree-check .checkbox + label:after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  background: #5e82db;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.modal-content .form-content .form-agree .agree-check .checkbox:checked + label:after {
+  background: #fff;
+}
+
+.modal-content .form-content .input-wrapper {
+  max-width: 437px;
+  height: 60px;
+  border-radius: 10px;
+  border: 1px solid #ddd6d6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 18px;
+}
+
+.modal-content .form-content .input-wrapper:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.modal-content .form-content .input-wrapper .input-icon {
+  font-size: 20px;
+  color: #c7c9d3;
+}
+
+.modal-content .form-content .input-wrapper input {
+  font-family: "OfficinaSansC";
+  font-weight: normal;
+  font-size: 20px;
+  margin-left: 18px;
+  border: none;
+  height: 100%;
+  width: 100%;
+}
+
+.modal-content .form-content .input-wrapper input:focus {
+  outline: none;
+}
+
+.modal-content .form-content .input-wrapper input::-webkit-input-placeholder {
+  color: #83858e;
+  opacity: 0.9;
+}
+
+.modal-content .form-content .input-wrapper input:-ms-input-placeholder {
+  color: #83858e;
+  opacity: 0.9;
+}
+
+.modal-content .form-content .input-wrapper input::-ms-input-placeholder {
+  color: #83858e;
+  opacity: 0.9;
+}
+
+.modal-content .form-content .input-wrapper input::placeholder {
+  color: #83858e;
+  opacity: 0.9;
+}
+
+.modal-content .form-content .sign-btn {
+  cursor: pointer;
+  margin-top: 32px;
+  border: none;
+  height: 65px;
+  border-radius: 32.5px;
+  background-color: #fece0c;
+  font-weight: bold;
+  text-align: center;
+  width: 430px;
+  font-family: "OfficinaSansC";
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  letter-spacing: 1px;
+}
+
+.modal-lg {
+  max-width: 1198px;
+}
+
 #slide-panel {
   position: fixed;
   width: 300px;
@@ -9987,7 +10206,7 @@ readers do not read off random characters that represent icons */
   bottom: 0;
   z-index: 99;
   padding-top: 125px;
-  background: #ededed;
+  background: #526cd7;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
@@ -10004,6 +10223,29 @@ readers do not read off random characters that represent icons */
 #slide-panel.open {
   -webkit-transform: none;
           transform: none;
+}
+
+#slide-panel .slide-panel_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#slide-panel .slide-panel_content .nav-link {
+  font-family: "OfficinaSansC";
+  font-weight: 900;
+  font-size: 22px;
+  color: white;
+  white-space: nowrap;
+  line-height: 22px;
+}
+
+#slide-panel .slide-panel_content .nav-link:not(:last-child) {
+  margin-bottom: 12px;
 }
 
 #hamburger-button {

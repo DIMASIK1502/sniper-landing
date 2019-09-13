@@ -12,7 +12,20 @@
     <title>Document</title>
   </head>
   <body>
-    <div id="slide-panel"></div>
+    <button id="up-button"><i class="fas fa-arrow-up"></i></button>
+    <div id="slide-panel">
+      <div class="slide-panel_content">
+        <a data-scroll href="#benefits" class="nav-link">Преимущества</a>
+        <a data-scroll href="#types-of-training" class="nav-link"
+          >Виды тренировок</a
+        >
+        <a data-scroll href="#trainers" class="nav-link">Тренеры</a>
+        <a data-scroll href="#season-tickets" class="nav-link">Абонементы</a>
+        <a data-scroll href="#reviews" class="nav-link">Отзывы</a>
+        <a data-scroll href="#gallery" class="nav-link">Галерея</a>
+        <a data-scroll href="#contacts" class="nav-link">Контакты</a>
+      </div>
+    </div>
     <header class="header-section">
       <div class="container">
         <div class="header-nav">
@@ -26,13 +39,19 @@
             </div>
             <div class="col-7 d-flex align-items-center">
               <div class="nav-menu">
-                <a class="menu-link">Преимущества</a>
-                <a class="menu-link">Виды тренировок</a>
-                <a class="menu-link">Тренеры</a>
-                <a class="menu-link">Абонементы</a>
-                <a class="menu-link">Отзывы</a>
-                <a class="menu-link">Галерея</a>
-                <a class="menu-link">Контакты</a>
+                <a data-scroll href="#benefits" class="menu-link"
+                  >Преимущества</a
+                >
+                <a data-scroll href="#types-of-training" class="menu-link"
+                  >Виды тренировок</a
+                >
+                <a data-scroll href="#trainers" class="menu-link">Тренеры</a>
+                <a data-scroll href="#season-tickets" class="menu-link"
+                  >Абонементы</a
+                >
+                <a data-scroll href="#reviews" class="menu-link">Отзывы</a>
+                <a data-scroll href="#gallery" class="menu-link">Галерея</a>
+                <a data-scroll href="#contacts" class="menu-link">Контакты</a>
               </div>
             </div>
             <div class="col-3">
@@ -86,7 +105,13 @@
               </span>
             </div>
           </div>
-          <button class="preview-button">
+          <button
+            type="button"
+            id="sing-up-btn"
+            data-toggle="modal"
+            data-target="#sign-up-modal"
+            class="preview-button"
+          >
             Записаться на бесплатное занятие
           </button>
           <div class="social-links">
@@ -192,7 +217,7 @@
     </section>
     <section class="benefits-section">
       <div class="container">
-        <h1 class="section-title">Преимущества нашей школы:</h1>
+        <h1 id="benefits" class="section-title">Преимущества нашей школы:</h1>
         <div class="benefis-grid">
           <div class="row no-gutters">
             <div class="col-4 grid-item">
@@ -280,7 +305,7 @@
     </section>
     <section class="types-of-training">
       <div class="container">
-        <h1 class="section-title">Виды тренировок</h1>
+        <h1 id="types-of-training" class="section-title">Виды тренировок</h1>
         <div class="card-row">
           <div class="row no-gutters">
             <div class="col-6">
@@ -400,9 +425,11 @@
     <section class="treners-section">
       <div class="treners-wrapper">
         <div class="container container-full">
-          <h1 class="section-title">Тренеры</h1>
+          <h1 id="trainers" class="section-title">Тренеры</h1>
           <div class="treners-row row no-gutters">
-            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 order-1 order-sm-1 order-md-0 order-xl-0 order-lg-0">
+            <div
+              class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 order-1 order-sm-1 order-md-0 order-xl-0 order-lg-0"
+            >
               <div class="trener-info">
                 <h4 class="info-title">Напалков К.С.</h4>
                 <p class="info-subtitle">
@@ -517,7 +544,7 @@
     </section>
     <section class="tickets-section">
       <div class="container">
-        <h1 class="section-title">Абонементы</h1>
+        <h1 id="season-tickets" class="section-title">Абонементы</h1>
         <div class="row tickets-row">
           <div class="col-4">
             <div class="ticket-card">
@@ -581,7 +608,7 @@
     <section class="gallery-section">
       <div class="container">
         <div class="gallery-header">
-          <h1 class="header-title">Галерея</h1>
+          <h1 id="gallery" class="header-title">Галерея</h1>
           <div class="header-actions">
             <button class="action-button">Все</button>
             <button class="action-button">Персональные</button>
@@ -589,7 +616,11 @@
           </div>
         </div>
       </div>
-      <div id="aniimated-thumbnials" data-responsive="img/1-375.jpg 375, img/1-480.jpg 480, img/1-757.jpg 757" class="row no-gutters">
+      <div
+        id="aniimated-thumbnials"
+        data-responsive="img/1-375.jpg 375, img/1-480.jpg 480, img/1-757.jpg 757"
+        class="row no-gutters"
+      >
         <a class="gallery-img" href="img/p1.png">
           <img class="img-fluid" src="img/p1.png" />
         </a>
@@ -605,7 +636,7 @@
         <a class="gallery-img" href="img/p5.png">
           <img class="img-fluid" src="img/p5.png" />
         </a>
-        <a class="gallery-img"  href="img/p6.png">
+        <a class="gallery-img" href="img/p6.png">
           <img class="img-fluid" src="img/p6.png" />
         </a>
         <a class="gallery-img" href="img/p7.png">
@@ -630,9 +661,11 @@
     <footer>
       <section class="contacts-section">
         <div class="container">
-          <h1 class="section-title">Контактная информация</h1>
+          <h1 id="contacts" class="section-title">Контактная информация</h1>
           <div class="contacts-row row">
-            <div class="d-lg-flex d-lg-flex d-md-flex d-sm-none d-none col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+            <div
+              class="d-lg-flex d-lg-flex d-md-flex d-sm-none d-none col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4"
+            >
               <div class="logo">
                 <img class="img-fluid" src="./img/logo-big.png" />
               </div>
@@ -687,6 +720,64 @@
         </div>
       </section>
     </footer>
+    <div
+      class="modal fade"
+      id="sign-up-modal"
+      class="sign-up-modal"
+      role="dialog"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="row">
+            <div class="col-6">
+              <div class="sing-up-form">
+                <h2 class="form-title">
+                  Сомневаетесь что мы<br />
+                  именно те, кто вам нужен?
+                </h2>
+                <p class="form-subtitle">
+                  Готовы доказать, что нам не всё равно и предложить<br />
+                  Вам пробное занятие
+                </p>
+                <div class="form-content">
+                  <div class="input-wrapper">
+                    <div class="input-icon">
+                      <i class="fas fa-user"></i>
+                    </div>
+                    <input placeholder="Ваше имя" type="text" />
+                  </div>
+                  <div class="input-wrapper">
+                    <div class="input-icon">
+                      <i class="fas fa-phone"></i>
+                    </div>
+                    <input
+                      class="input-phone"
+                      id="input-phone"
+                      placeholder="Ваш телефон"
+                      type="text"
+                    />
+                  </div>
+                  <button class="sign-btn">
+                    Записаться на бесплатное занятие
+                  </button>
+                  <div class="form-agree">
+                      <div class="agree-check">
+                        <input  checked="checked"  type="checkbox" class="checkbox" id="checkbox" />
+                        <label for="checkbox"><span>Я согласен с политикой конфиденциальности</span></label>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 d-flex justify-content-center align-items-center">
+              <div>
+                <img class="img-fluid" src="/img/modal-logo.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
   <script src="./js/libs/jquery.js"></script>
   <script src="./js/libs/lightgallery.min.js"></script>
@@ -695,6 +786,7 @@
   <script src="./js/libs/bootstrap.min.js"></script>
   <script src="./js/libs/swiper.min.js"></script>
   <script src="./js/libs/instafeed.min.js"></script>
-
+  <script src="./js/libs/smooth-scroll.polyfills.min.js"></script>
+  <script src="./js/libs/imask.js"></script>
   <script src="./js/script.js"></script>
 </html>

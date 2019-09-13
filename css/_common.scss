@@ -1,3 +1,149 @@
+#up-button {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  background-color: #fece0c;
+  border: none;
+  z-index: 50;
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  transition: 0.2s;
+  &:hover {
+    transition: 0.2s;
+    background-color: lighten($color: #fece0c, $amount: 10);
+  }
+  &:focus {
+    outline: none;
+  }
+}
+.modal-content {
+  border-radius: 20px;
+  border: none;
+  background-color: white;
+  box-shadow: -10px -6px 54px 0px rgba(37, 43, 58, 0.15);
+  padding: 32px 32px;
+  .form-title {
+    color: #1a1a1a;
+    font-weight: 900;
+    font-family: "OfficinaSansC";
+    font-size: 39px;
+    margin-left: 32px;
+  }
+  .form-subtitle {
+    color: #3d1914;
+    font-family: "OfficinaSansBookC";
+    font-size: 24px;
+    line-height: 30px;
+    margin-left: 32px;
+    margin-bottom: 32px;
+  }
+  .form-content {
+    padding-left: 32px;
+    .form-agree {
+      .agree-check {
+        .checkbox {
+          position: absolute;
+          z-index: -1;
+          opacity: 0;
+          & + label {
+            span {
+              font-size: 18px;
+              font-family: "OfficinaSansBookC";
+              color: rgba($color: #5e82db, $alpha: 0.66);
+              display: block;
+              margin-top: -3px;
+            }
+            margin-top: 24px;
+            position: relative;
+            padding: 0 0 0 32px;
+            cursor: pointer;
+            &:before {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 20px;
+              height: 20px;
+              border-radius: 10px;
+              background-color: #5e82db;
+            }
+            &:after {
+              content: "";
+              position: absolute;
+              top: 4px;
+              left: 4px;
+              width: 12px;
+              height: 12px;
+              border-radius: 6px;
+              background: #5e82db;
+              transition: 0.2s;
+            }
+          }
+          &:checked {
+            & + label {
+              &:after {
+                background: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+    .input-wrapper {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+      max-width: 437px;
+      height: 60px;
+      border-radius: 10px;
+      border: 1px solid #ddd6d6;
+      display: flex;
+      align-items: center;
+      padding: 0 18px;
+      .input-icon {
+        font-size: 20px;
+        color: #c7c9d3;
+      }
+
+      input {
+        font-family: "OfficinaSansC";
+        font-weight: normal;
+        &:focus {
+          outline: none;
+        }
+        font-size: 20px;
+        margin-left: 18px;
+        border: none;
+        height: 100%;
+        &::placeholder {
+          color: #83858e;
+          opacity: 0.9;
+        }
+        width: 100%;
+      }
+    }
+    .sign-btn {
+      cursor: pointer;
+      margin-top: 32px;
+      border: none;
+      height: 65px;
+      border-radius: 32.5px;
+      background-color: #fece0c;
+      font-weight: bold;
+      text-align: center;
+      width: 430px;
+      font-family: "OfficinaSansC";
+      font-size: 16px;
+      text-transform: uppercase;
+      color: #1a1a1a;
+      letter-spacing: 1px;
+    }
+  }
+}
+.modal-lg {
+  max-width: 1198px;
+}
 #slide-panel {
   position: fixed;
   width: 300px;
@@ -8,7 +154,7 @@
   bottom: 0;
   z-index: 99;
   padding-top: 125px;
-  background: #ededed;
+  background: #526cd7;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
@@ -19,6 +165,22 @@
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   &.open {
     transform: none;
+  }
+  .slide-panel_content {
+    display: flex;
+    flex-direction: column;
+
+    .nav-link {
+      font-family: "OfficinaSansC";
+      font-weight: 900;
+      font-size: 22px;
+      color: white;
+      white-space: nowrap;
+      line-height: 22px;
+      &:not(:last-child) {
+        margin-bottom: 12px;
+      }
+    }
   }
 }
 #hamburger-button {

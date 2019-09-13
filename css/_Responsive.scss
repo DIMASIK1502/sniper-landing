@@ -31,6 +31,33 @@
   }
 }
 @media (max-width: 1024px) {
+  #sign-up-modal {
+    .modal-dialog {
+      .modal-content {
+        .form-title {
+          margin-left: 0;
+        }
+        .form-subtitle {
+          margin-left: 0;
+        }
+        .form-content {
+          margin-left: 0;
+          padding-left: 0;
+        }
+        .row {
+          .col-6 {
+            justify-content: center;
+            display: flex;
+            flex: 0 0 100%;
+            max-width: 100%;
+            &:last-child {
+              display: none !important;
+            }
+          }
+        }
+      }
+    }
+  }
   .header-section {
     background-position-x: left, 612px;
   }
@@ -202,6 +229,16 @@
   }
 }
 @media (max-width: 568px) {
+  #sign-up-modal .modal-dialog .modal-content .form-title {
+    br{
+      display: none;
+    }
+  }
+  #sign-up-modal .modal-dialog .modal-content .form-subtitle {
+    br{
+      display: none;
+    }
+  }
   .header-section .header-preview .preview-button {
     padding: 0 16px;
     width: auto;
