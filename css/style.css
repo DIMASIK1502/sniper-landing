@@ -1072,13 +1072,13 @@
 }
 
 @media (max-width: 1024px) {
-  #sign-up-modal .modal-dialog .modal-content .form-title {
+  #sign-up-modal .modal-dialog .modal-content .modal-form-title {
     margin-left: 0;
   }
-  #sign-up-modal .modal-dialog .modal-content .form-subtitle {
+  #sign-up-modal .modal-dialog .modal-content .modal-form-subtitle {
     margin-left: 0;
   }
-  #sign-up-modal .modal-dialog .modal-content .form-content {
+  #sign-up-modal .modal-dialog .modal-content .modal-form-content {
     margin-left: 0;
     padding-left: 0;
   }
@@ -1305,10 +1305,21 @@
 }
 
 @media (max-width: 568px) {
-  #sign-up-modal .modal-dialog .modal-content .form-title br {
+  .modal-content .modal-form-subtitle {
+    font-size: 16px;
+    line-height: 16px;
+  }
+  .modal-content .modal-form-content .sign-btn {
+    width: 100% !important;
+  }
+  .modal-content .modal-form-content .input-wrapper {
+    width: auto;
+    max-width: none;
+  }
+  #sign-up-modal .modal-dialog .modal-content .modal-form-title br {
     display: none;
   }
-  #sign-up-modal .modal-dialog .modal-content .form-subtitle br {
+  #sign-up-modal .modal-dialog .modal-content .modal-form-subtitle br {
     display: none;
   }
   .header-section .header-preview .preview-button {
@@ -1346,6 +1357,54 @@
   }
   .header-section .header-preview .preview-list .list-item span {
     font-size: 20px;
+  }
+  #callback-modal .modal-dialog .modal-content .modal-form-content .sign-btn {
+    margin-top: 8px;
+  }
+  #callback-modal .modal-dialog .modal-content .modal-form-content .form-agree .agree-check .checkbox + label span {
+    font-size: 16px;
+  }
+  #callback-modal .modal-dialog .modal-content .modal-form-content .sign-btn {
+    font-size: 14px;
+  }
+  #callback-modal .modal-dialog .modal-content .modal-form-title {
+    margin-top: 16px;
+    font-size: 28px !important;
+  }
+  #callback-modal .modal-dialog .modal-content .modal-form-title br {
+    display: none;
+  }
+  #callback-modal .modal-dialog .modal-content .modal-form-subtitle {
+    font-size: 18px !important;
+    line-height: 18px !important;
+  }
+  #callback-modal .modal-dialog .modal-content .modal-form-subtitle br {
+    display: none;
+  }
+  #sign-up-modal .modal-dialog .modal-content .modal-form-content .sign-btn {
+    margin-top: 8px;
+  }
+  #sign-up-modal .modal-dialog .modal-content .modal-form-content .form-agree .agree-check .checkbox + label span {
+    font-size: 16px;
+  }
+  #sign-up-modal .modal-dialog .modal-content .modal-form-content .sign-btn {
+    font-size: 14px;
+  }
+  #sign-up-modal .modal-dialog .modal-content .modal-form-title {
+    font-size: 28px !important;
+  }
+  #sign-up-modal .modal-dialog .modal-content .modal-form-title br {
+    display: none;
+  }
+  #sign-up-modal .modal-dialog .modal-content .modal-form-subtitle {
+    font-size: 18px !important;
+    line-height: 18px !important;
+  }
+  #sign-up-modal .modal-dialog .modal-content .modal-form-subtitle br {
+    display: none;
+  }
+  .modal-content .modal-form-content .sign-btn {
+    font-size: 14px;
   }
 }
 
@@ -1395,6 +1454,23 @@
   }
   .gallery-section .gallery-header .header-actions .action-button {
     margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 375px) {
+  #callback-modal
+.modal-dialog
+.modal-content
+.modal-form-content
+.form-agree
+.agree-check
+.checkbox
++ label
+span {
+    font-size: 12px;
+  }
+  #callback-modal .modal-dialog .modal-content .modal-form-content .sign-btn {
+    font-size: 12px;
   }
 }
 
@@ -10039,7 +10115,12 @@ readers do not read off random characters that represent icons */
   outline: none;
 }
 
+.notifyjs-bootstrap-error {
+  background-image: none;
+}
+
 .modal-content {
+  position: relative;
   border-radius: 20px;
   border: none;
   background-color: white;
@@ -10048,7 +10129,33 @@ readers do not read off random characters that represent icons */
   padding: 32px 32px;
 }
 
-.modal-content .form-title {
+.modal-content .close {
+  z-index: 50;
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  font-size: 36px;
+}
+
+.modal-content .close:focus {
+  outline: none;
+}
+
+.modal-content.small .modal-form-title {
+  text-align: center;
+  margin-left: 0;
+}
+
+.modal-content.small .modal-form-subtitle {
+  text-align: center;
+  margin-left: 0;
+}
+
+.modal-content.small .modal-form-content {
+  padding-left: 0;
+}
+
+.modal-content .modal-form-title {
   color: #1a1a1a;
   font-weight: 900;
   font-family: "OfficinaSansC";
@@ -10056,7 +10163,7 @@ readers do not read off random characters that represent icons */
   margin-left: 32px;
 }
 
-.modal-content .form-subtitle {
+.modal-content .modal-form-subtitle {
   color: #3d1914;
   font-family: "OfficinaSansBookC";
   font-size: 24px;
@@ -10065,24 +10172,24 @@ readers do not read off random characters that represent icons */
   margin-bottom: 32px;
 }
 
-.modal-content .form-content {
+.modal-content .modal-form-content {
   padding-left: 32px;
 }
 
-.modal-content .form-content .form-agree .agree-check .checkbox {
+.modal-content .modal-form-content .form-agree .agree-check .checkbox {
   position: absolute;
   z-index: -1;
   opacity: 0;
 }
 
-.modal-content .form-content .form-agree .agree-check .checkbox + label {
+.modal-content .modal-form-content .form-agree .agree-check .checkbox + label {
   margin-top: 24px;
   position: relative;
   padding: 0 0 0 32px;
   cursor: pointer;
 }
 
-.modal-content .form-content .form-agree .agree-check .checkbox + label span {
+.modal-content .modal-form-content .form-agree .agree-check .checkbox + label span {
   font-size: 18px;
   font-family: "OfficinaSansBookC";
   color: rgba(94, 130, 219, 0.66);
@@ -10090,7 +10197,7 @@ readers do not read off random characters that represent icons */
   margin-top: -3px;
 }
 
-.modal-content .form-content .form-agree .agree-check .checkbox + label:before {
+.modal-content .modal-form-content .form-agree .agree-check .checkbox + label:before {
   content: "";
   position: absolute;
   top: 0;
@@ -10101,7 +10208,7 @@ readers do not read off random characters that represent icons */
   background-color: #5e82db;
 }
 
-.modal-content .form-content .form-agree .agree-check .checkbox + label:after {
+.modal-content .modal-form-content .form-agree .agree-check .checkbox + label:after {
   content: "";
   position: absolute;
   top: 4px;
@@ -10114,11 +10221,11 @@ readers do not read off random characters that represent icons */
   transition: 0.2s;
 }
 
-.modal-content .form-content .form-agree .agree-check .checkbox:checked + label:after {
+.modal-content .modal-form-content .form-agree .agree-check .checkbox:checked + label:after {
   background: #fff;
 }
 
-.modal-content .form-content .input-wrapper {
+.modal-content .modal-form-content .input-wrapper {
   max-width: 437px;
   height: 60px;
   border-radius: 10px;
@@ -10132,16 +10239,16 @@ readers do not read off random characters that represent icons */
   padding: 0 18px;
 }
 
-.modal-content .form-content .input-wrapper:not(:last-child) {
+.modal-content .modal-form-content .input-wrapper:not(:last-child) {
   margin-bottom: 20px;
 }
 
-.modal-content .form-content .input-wrapper .input-icon {
+.modal-content .modal-form-content .input-wrapper .input-icon {
   font-size: 20px;
   color: #c7c9d3;
 }
 
-.modal-content .form-content .input-wrapper input {
+.modal-content .modal-form-content .input-wrapper input {
   font-family: "OfficinaSansC";
   font-weight: normal;
   font-size: 20px;
@@ -10151,31 +10258,31 @@ readers do not read off random characters that represent icons */
   width: 100%;
 }
 
-.modal-content .form-content .input-wrapper input:focus {
+.modal-content .modal-form-content .input-wrapper input:focus {
   outline: none;
 }
 
-.modal-content .form-content .input-wrapper input::-webkit-input-placeholder {
+.modal-content .modal-form-content .input-wrapper input::-webkit-input-placeholder {
   color: #83858e;
   opacity: 0.9;
 }
 
-.modal-content .form-content .input-wrapper input:-ms-input-placeholder {
+.modal-content .modal-form-content .input-wrapper input:-ms-input-placeholder {
   color: #83858e;
   opacity: 0.9;
 }
 
-.modal-content .form-content .input-wrapper input::-ms-input-placeholder {
+.modal-content .modal-form-content .input-wrapper input::-ms-input-placeholder {
   color: #83858e;
   opacity: 0.9;
 }
 
-.modal-content .form-content .input-wrapper input::placeholder {
+.modal-content .modal-form-content .input-wrapper input::placeholder {
   color: #83858e;
   opacity: 0.9;
 }
 
-.modal-content .form-content .sign-btn {
+.modal-content .modal-form-content .sign-btn {
   cursor: pointer;
   margin-top: 32px;
   border: none;

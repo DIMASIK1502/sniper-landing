@@ -61,7 +61,11 @@
                 <span></span>
               </button>
               <div class="nav-callback">
-                <button class="callback-button">
+                <button
+                  data-toggle="modal"
+                  data-target="#callback-modal"
+                  class="callback-button"
+                >
                   <div class="button-icon">
                     <i class="fas fa-phone"></i>
                   </div>
@@ -360,7 +364,13 @@
                     Больше подходит на начальном этапе подготовки<br />
                     либо для более детальной работы над техникой
                   </span>
-                  <button class="footer-button">Записаться на занятие</button>
+                  <button
+                    data-toggle="modal"
+                    data-target="#sign-up-modal"
+                    class="footer-button"
+                  >
+                    Записаться на занятие
+                  </button>
                 </div>
               </div>
             </div>
@@ -414,7 +424,13 @@
                     когда изучены основы техники передвижения и есть<br />
                     недочеты в тактической подготовке
                   </span>
-                  <button class="footer-button">Записаться на занятие</button>
+                  <button
+                    data-toggle="modal"
+                    data-target="#sign-up-modal"
+                    class="footer-button"
+                  >
+                    Записаться на занятие
+                  </button>
                 </div>
               </div>
             </div>
@@ -558,7 +574,13 @@
                 </div>
               </div>
               <div class="card_footer">
-                <button class="footer-button">Записаться на занятие</button>
+                <button
+                  data-toggle="modal"
+                  data-target="#sign-up-modal"
+                  class="footer-button"
+                >
+                  Записаться на занятие
+                </button>
               </div>
             </div>
           </div>
@@ -578,7 +600,13 @@
                 </div>
               </div>
               <div class="card_footer">
-                <button class="footer-button">Записаться на занятие</button>
+                <button
+                  data-toggle="modal"
+                  data-target="#sign-up-modal"
+                  class="footer-button"
+                >
+                  Записаться на занятие
+                </button>
               </div>
             </div>
           </div>
@@ -598,7 +626,13 @@
                 </div>
               </div>
               <div class="card_footer">
-                <button class="footer-button">Записаться на занятие</button>
+                <button
+                  data-toggle="modal"
+                  data-target="#sign-up-modal"
+                  class="footer-button"
+                >
+                  Записаться на занятие
+                </button>
               </div>
             </div>
           </div>
@@ -728,23 +762,31 @@
     >
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <i class="fal fa-times"></i>
+          </button>
           <div class="row">
             <div class="col-6">
               <div class="sing-up-form">
-                <h2 class="form-title">
+                <h2 class="modal-form-title">
                   Сомневаетесь что мы<br />
                   именно те, кто вам нужен?
                 </h2>
-                <p class="form-subtitle">
+                <p class="modal-form-subtitle">
                   Готовы доказать, что нам не всё равно и предложить<br />
                   Вам пробное занятие
                 </p>
-                <div class="form-content">
+                <div class="modal-form-content">
                   <div class="input-wrapper">
                     <div class="input-icon">
                       <i class="fas fa-user"></i>
                     </div>
-                    <input placeholder="Ваше имя" type="text" />
+                    <input id="sign-input" placeholder="Ваше имя" type="text" />
                   </div>
                   <div class="input-wrapper">
                     <div class="input-icon">
@@ -752,26 +794,165 @@
                     </div>
                     <input
                       class="input-phone"
-                      id="input-phone"
+                      id="sign-phone"
                       placeholder="Ваш телефон"
                       type="text"
                     />
                   </div>
-                  <button class="sign-btn">
+                  <button id="sign-btn" class="sign-btn">
                     Записаться на бесплатное занятие
                   </button>
                   <div class="form-agree">
-                      <div class="agree-check">
-                        <input  checked="checked"  type="checkbox" class="checkbox" id="checkbox" />
-                        <label for="checkbox"><span>Я согласен с политикой конфиденциальности</span></label>
-                      </div>
+                    <div class="agree-check">
+                      <input
+                        checked="checked"
+                        type="checkbox"
+                        class="checkbox"
+                        id="checkbox"
+                      />
+                      <label for="checkbox"
+                        ><span
+                          >Я согласен с политикой конфиденциальности</span
+                        ></label
+                      >
                     </div>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="col-6 d-flex justify-content-center align-items-center">
               <div>
                 <img class="img-fluid" src="/img/modal-logo.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="callback-modal"
+      class="callback-modal"
+      role="dialog"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content  small">
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <i class="fal fa-times"></i>
+          </button>
+          <div class="sing-up-form">
+            <h2 class="modal-form-title">
+              Обратный звонок
+            </h2>
+            <p class="modal-form-subtitle">
+              Оставьте свой номер телефона, и мы свяжемся с Вами в ближайшее
+              время
+            </p>
+            <div class="modal-form-content">
+              <div class="input-wrapper">
+                <div class="input-icon">
+                  <i class="fas fa-user"></i>
+                </div>
+                <input id="input-name" placeholder="Ваше имя" type="text" />
+              </div>
+              <div class="input-wrapper">
+                <div class="input-icon">
+                  <i class="fas fa-phone"></i>
+                </div>
+                <input
+                  class="input-phone"
+                  id="input-callback-phone"
+                  placeholder="Ваш телефон"
+                  type="text"
+                />
+              </div>
+              <button id="callback-button" class="sign-btn">
+                Записаться на бесплатное занятие
+              </button>
+              <div class="form-agree">
+                <div class="agree-check">
+                  <input
+                    checked="checked"
+                    type="checkbox"
+                    class="checkbox"
+                    id="checkbox-call"
+                  />
+                  <label for="checkbox-call"
+                    ><span
+                      >Я согласен с политикой конфиденциальности</span
+                    ></label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="success-modal"
+      class="success-modal"
+      role="dialog"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content  small">
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <i class="fal fa-times"></i>
+          </button>
+          <div class="sing-up-form">
+            <h2 class="modal-form-title">
+              Обратный звонок
+            </h2>
+            <p class="modal-form-subtitle">
+              Оставьте свой номер телефона, и мы свяжемся с Вами в ближайшее
+              время
+            </p>
+            <div class="modal-form-content">
+              <div class="input-wrapper">
+                <div class="input-icon">
+                  <i class="fas fa-user"></i>
+                </div>
+                <input id="input-name" placeholder="Ваше имя" type="text" />
+              </div>
+              <div class="input-wrapper">
+                <div class="input-icon">
+                  <i class="fas fa-phone"></i>
+                </div>
+                <input
+                  class="input-phone"
+                  id="input-callback-phone"
+                  placeholder="Ваш телефон"
+                  type="text"
+                />
+              </div>
+              <button id="callback-button" class="sign-btn">
+                Записаться на бесплатное занятие
+              </button>
+              <div class="form-agree">
+                <div class="agree-check">
+                  <input
+                    checked="checked"
+                    type="checkbox"
+                    class="checkbox"
+                    id="checkbox-call"
+                  />
+                  <label for="checkbox-call"
+                    ><span
+                      >Я согласен с политикой конфиденциальности</span
+                    ></label
+                  >
+                </div>
               </div>
             </div>
           </div>
@@ -788,5 +969,7 @@
   <script src="./js/libs/instafeed.min.js"></script>
   <script src="./js/libs/smooth-scroll.polyfills.min.js"></script>
   <script src="./js/libs/imask.js"></script>
+  <script src="./js/libs/smtp.js"></script>
+  <script src="./js/libs/notify.min.js"></script>
   <script src="./js/script.js"></script>
 </html>

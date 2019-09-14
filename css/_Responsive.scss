@@ -34,13 +34,13 @@
   #sign-up-modal {
     .modal-dialog {
       .modal-content {
-        .form-title {
+        .modal-form-title {
           margin-left: 0;
         }
-        .form-subtitle {
+        .modal-form-subtitle {
           margin-left: 0;
         }
-        .form-content {
+        .modal-form-content {
           margin-left: 0;
           padding-left: 0;
         }
@@ -229,13 +229,24 @@
   }
 }
 @media (max-width: 568px) {
-  #sign-up-modal .modal-dialog .modal-content .form-title {
-    br{
+  .modal-content .modal-form-subtitle {
+    font-size: 16px;
+    line-height: 16px;
+  }
+  .modal-content .modal-form-content .sign-btn {
+    width: 100% !important;
+  }
+  .modal-content .modal-form-content .input-wrapper {
+    width: auto;
+    max-width: none;
+  }
+  #sign-up-modal .modal-dialog .modal-content .modal-form-title {
+    br {
       display: none;
     }
   }
-  #sign-up-modal .modal-dialog .modal-content .form-subtitle {
-    br{
+  #sign-up-modal .modal-dialog .modal-content .modal-form-subtitle {
+    br {
       display: none;
     }
   }
@@ -275,6 +286,66 @@
 
   .header-section .header-preview .preview-list .list-item span {
     font-size: 20px;
+  }
+  #callback-modal {
+    .modal-dialog {
+      .modal-content {
+        .modal-form-content .sign-btn {
+          margin-top: 8px;
+        }
+        .modal-form-content .form-agree .agree-check .checkbox + label span {
+          font-size: 16px;
+        }
+        .modal-form-content .sign-btn {
+          font-size: 14px;
+        }
+        .modal-form-title {
+          margin-top: 16px;
+          br {
+            display: none;
+          }
+          font-size: 28px !important;
+        }
+        .modal-form-subtitle {
+          br {
+            display: none;
+          }
+          font-size: 18px !important;
+          line-height: 18px !important;
+        }
+      }
+    }
+  }
+  #sign-up-modal {
+    .modal-dialog {
+      .modal-content {
+        .modal-form-content .sign-btn {
+          margin-top: 8px;
+        }
+        .modal-form-content .form-agree .agree-check .checkbox + label span {
+          font-size: 16px;
+        }
+        .modal-form-content .sign-btn {
+          font-size: 14px;
+        }
+        .modal-form-title {
+          br {
+            display: none;
+          }
+          font-size: 28px !important;
+        }
+        .modal-form-subtitle {
+          br {
+            display: none;
+          }
+          font-size: 18px !important;
+          line-height: 18px !important;
+        }
+      }
+    }
+  }
+  .modal-content .modal-form-content .sign-btn {
+    font-size: 14px;
   }
 }
 @media (max-width: 414px) {
@@ -323,6 +394,20 @@
   }
 }
 @media (max-width: 375px) {
+  #callback-modal
+    .modal-dialog
+    .modal-content
+    .modal-form-content
+    .form-agree
+    .agree-check
+    .checkbox
+    + label
+    span {
+    font-size: 12px;
+  }
+  #callback-modal .modal-dialog .modal-content .modal-form-content .sign-btn {
+    font-size: 12px;
+  }
 }
 @media (max-width: 320px) {
 }
