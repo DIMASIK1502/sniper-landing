@@ -639,6 +639,21 @@
         </div>
       </div>
     </section>
+    <section class="reviews-section">
+      <div class="swiper-container">
+        <div class="swiper-wrapper" id="inst"></div>
+        <div class="wrapper-actions">
+          <div class="container">
+            <div id="prev-btn" class="swiper-btn">
+              <i class="fas fa-chevron-left"></i>
+            </div>
+            <div id="next-btn" class="swiper-btn">
+              <i class="fas fa-chevron-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="gallery-section">
       <div class="container">
         <div class="gallery-header">
@@ -685,11 +700,6 @@
         <a class="gallery-img" href="img/p10.png">
           <img class="img-fluid" src="img/p10.png" />
         </a>
-      </div>
-    </section>
-    <section class="feedback-section">
-      <div class="container">
-        <div id="inst" class="row"></div>
       </div>
     </section>
     <footer>
@@ -754,6 +764,37 @@
         </div>
       </section>
     </footer>
+    <div class="modal fade" id="success-modal" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content small">
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <i class="fal fa-times"></i>
+          </button>
+          <div class="sing-up-form">
+            <i class="fal fa-smile modal-icon"></i>
+            <h2 class="modal-form-title">
+              Спасибо за заявку
+            </h2>
+            <p class="modal-form-subtitle">
+              Наш менеджер свяжется с Вами в течении 15 минут звонок
+            </p>
+          </div>
+          <button
+            type="button"
+            data-dismiss="modal"
+            aria-label="Close"
+            class="sign-btn"
+          >
+            Назад
+          </button>
+        </div>
+      </div>
+    </div>
     <div
       class="modal fade"
       id="sign-up-modal"
@@ -894,71 +935,6 @@
         </div>
       </div>
     </div>
-    <div
-      class="modal fade"
-      id="success-modal"
-      class="success-modal"
-      role="dialog"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content  small">
-          <button
-            type="button"
-            class="close"
-            data-dismiss="modal"
-            aria-label="Close"
-          >
-            <i class="fal fa-times"></i>
-          </button>
-          <div class="sing-up-form">
-            <h2 class="modal-form-title">
-              Обратный звонок
-            </h2>
-            <p class="modal-form-subtitle">
-              Оставьте свой номер телефона, и мы свяжемся с Вами в ближайшее
-              время
-            </p>
-            <div class="modal-form-content">
-              <div class="input-wrapper">
-                <div class="input-icon">
-                  <i class="fas fa-user"></i>
-                </div>
-                <input id="input-name" placeholder="Ваше имя" type="text" />
-              </div>
-              <div class="input-wrapper">
-                <div class="input-icon">
-                  <i class="fas fa-phone"></i>
-                </div>
-                <input
-                  class="input-phone"
-                  id="input-callback-phone"
-                  placeholder="Ваш телефон"
-                  type="text"
-                />
-              </div>
-              <button id="callback-button" class="sign-btn">
-                Записаться на бесплатное занятие
-              </button>
-              <div class="form-agree">
-                <div class="agree-check">
-                  <input
-                    checked="checked"
-                    type="checkbox"
-                    class="checkbox"
-                    id="checkbox-call"
-                  />
-                  <label for="checkbox-call"
-                    ><span
-                      >Я согласен с политикой конфиденциальности</span
-                    ></label
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </body>
   <script src="./js/libs/jquery.js"></script>
   <script src="./js/libs/lightgallery.min.js"></script>
@@ -971,5 +947,7 @@
   <script src="./js/libs/imask.js"></script>
   <script src="./js/libs/smtp.js"></script>
   <script src="./js/libs/notify.min.js"></script>
+  <script src="./js//libs/moment.js"></script>
+  <script src="./js//libs/moment-ru.js"></script>
   <script src="./js/script.js"></script>
 </html>

@@ -887,6 +887,205 @@
   max-width: 16.6%;
 }
 
+.reviews-section {
+  padding-top: 128px;
+}
+
+.reviews-section .swiper-container {
+  width: 100%;
+}
+
+.reviews-section .swiper-container .wrapper-actions {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  height: 100%;
+}
+
+.reviews-section .swiper-container .wrapper-actions .container {
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.reviews-section .swiper-container .wrapper-actions .swiper-btn {
+  border: none;
+  padding: 0;
+  margin: 0;
+  min-width: 65px;
+  height: 65px;
+  width: 65px;
+  background-color: #fece0c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 32.5px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 24px;
+  color: #1a1a1a;
+}
+
+.reviews-section .swiper-container .wrapper-actions .swiper-btn:focus {
+  outline: none;
+}
+
+.reviews-section .swiper-container .swiper-slide {
+  -webkit-transition: 0.2;
+  transition: 0.2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: white;
+  width: 936px;
+  border-radius: 20px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  -webkit-box-shadow: 0px 0px 22.5px 2.5px rgba(43, 52, 60, 0.15);
+          box-shadow: 0px 0px 22.5px 2.5px rgba(43, 52, 60, 0.15);
+}
+
+.reviews-section .swiper-container .swiper-slide.prev-feed {
+  opacity: 0.75;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-transition: 0.2;
+  transition: 0.2;
+}
+
+.reviews-section .swiper-container .swiper-slide.next-feed {
+  opacity: 0.75;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-transition: 0.2;
+  transition: 0.2;
+}
+
+.reviews-section .swiper-container .swiper-slide.swiper-slide-active {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.reviews-section .swiper-container .swiper-slide .slide-image {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  width: 600px;
+  height: 600px;
+}
+
+.reviews-section .swiper-container .swiper-slide .slide-info {
+  width: 335px;
+}
+
+.reviews-section .swiper-container .swiper-slide .slide-info .info-caption {
+  padding: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.reviews-section .swiper-container .swiper-slide .slide-info .info-caption .caption-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.reviews-section .swiper-container .swiper-slide .slide-info .info-caption .caption-wrapper .profile-location {
+  max-width: 255px;
+}
+
+.reviews-section .swiper-container .swiper-slide .slide-info .info-caption .caption-wrapper .profile-name {
+  margin-bottom: 4px;
+  display: block;
+}
+
+.reviews-section .swiper-container .swiper-slide .slide-info .info-caption .caption-wrapper .profile-createdat {
+  display: block;
+  margin-top: 8px;
+  font-weight: 400;
+  color: #999;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+.reviews-section .swiper-container .swiper-slide .slide-info .gradient-border {
+  margin-right: 8px;
+  border-radius: 21px;
+  background: #f09433;
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+}
+
+.reviews-section .swiper-container .swiper-slide .slide-info .head-icon {
+  margin: 2px;
+  border-radius: 16px;
+  width: 32px;
+  min-width: 32px;
+  height: 32px;
+  background-position: center center;
+  background-size: cover;
+}
+
+.reviews-section .swiper-container .swiper-slide .slide-info .info-head {
+  width: 100%;
+  border-bottom: 1px solid #efefef;
+  padding: 0 14px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.reviews-section .swiper-container .swiper-slide .slide-info .profile-location {
+  color: #262626;
+  line-height: 15px;
+  font-size: 12px;
+}
+
+.reviews-section .swiper-container .swiper-slide .slide-info .profile-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.reviews-section .swiper-container .swiper-slide .slide-info .profile-name {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  color: #262626;
+}
+
 .gallery-section {
   padding-top: 128px;
 }
@@ -10119,6 +10318,36 @@ readers do not read off random characters that represent icons */
   background-image: none;
 }
 
+#success-modal .sing-up-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#success-modal .sign-btn {
+  cursor: pointer;
+  margin-top: 16px;
+  border: none;
+  height: 65px;
+  border-radius: 32.5px;
+  background-color: #fece0c;
+  font-weight: bold;
+  text-align: center;
+  width: 430px;
+  font-family: "OfficinaSansC";
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  letter-spacing: 1px;
+}
+
 .modal-content {
   position: relative;
   border-radius: 20px;
@@ -10127,6 +10356,13 @@ readers do not read off random characters that represent icons */
   -webkit-box-shadow: -10px -6px 54px 0px rgba(37, 43, 58, 0.15);
           box-shadow: -10px -6px 54px 0px rgba(37, 43, 58, 0.15);
   padding: 32px 32px;
+}
+
+.modal-content .modal-icon {
+  font-size: 169px;
+  text-align: center;
+  color: #5e82db;
+  margin-bottom: 24px;
 }
 
 .modal-content .close {

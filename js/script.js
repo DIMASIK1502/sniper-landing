@@ -26,7 +26,28 @@ sendMail = (title, body, cb) => {
     }
   });
 };
-$(document).ready(() => {
+
+function getInstagramInfo(userId) {
+  return $.ajax({
+    url: `https://api.instagram.com/v1/users/${userId}/media/recent`, // or /users/self/media/recent for Sandbox
+    dataType: "jsonp",
+    type: "GET",
+    data: {
+      access_token: "8535532406.be48457.5da252ed5603483e9b03329922ed244d",
+      count: 20
+    },
+    success: function(data) {
+      return data.data;
+    },
+    error: function(data) {
+      return null;
+    }
+  });
+}
+
+$(document).ready(async () => {
+  moment.locale("ru");
+  const instagramData = await getInstagramInfo("8535532406");
   $("#callback-button").click(() => {
     const name = $("#input-name").val();
     const phone = $("#input-callback-phone").val();
@@ -38,6 +59,7 @@ $(document).ready(() => {
           $("#input-name").val("");
           $("#input-callback-phone").val("");
           $("#callback-modal").modal("hide");
+          $("#success-modal").modal("show");
         }
       );
     } else {
@@ -47,7 +69,7 @@ $(document).ready(() => {
     }
     //sendMail()
   });
-  $('#sign-btn').click(()=>{
+  $("#sign-btn").click(() => {
     const name = $("#sign-input").val();
     const phone = $("#sign-phone").val();
     if (name && phone && $("#checkbox").prop("checked")) {
@@ -58,6 +80,7 @@ $(document).ready(() => {
           $("#sign-input").val("");
           $("#sign-phone").val("");
           $("#sign-up-modal").modal("hide");
+          $("#success-modal").modal("show");
         }
       );
     } else {
@@ -91,23 +114,93 @@ $(document).ready(() => {
     $("#hamburger-button").toggleClass("show");
     $("#slide-panel").toggleClass("open");
   });
-  $(".nav-link ").click(() => {
+  $(".nav-link").click(() => {
     $("#hamburger-button").toggleClass("show");
     $("#slide-panel").toggleClass("open");
   });
 
-  var feed = new Instafeed({
-    accessToken: "445632943.1677ed0.7044278c01a24a308024ed330f8b0337",
-    clientId: "c4d20dcb5a1240ce8f543a48a0e969b4",
-    get: "user",
-    addClass: "gallery-img",
-    userId: "8535532406",
-    resolution: "low_resolution",
-    template:
-      '<div class="col-3"><div class="instagram-image-wraper">{{likes}}<a class="test" href="{{link}}"><img src="{{image}}" /></a></div></div>',
-    limit: 12,
-    target: "inst"
+  //8535532406
+  var mySwiper = new Swiper(".swiper-container", {
+    centeredSlides: true,
+    initialSlide: 1,
+    slidesPerView: "auto",
+    spaceBetween: 72,
+    slideNextClass: "next-feed",
+    slidePrevClass: "prev-feed"
   });
-  feed.run();
-  // console.log(feed);
+  if (instagramData) {
+    console.log(instagramData);
+    const formatedData = instagramData.data.map((item, key) => {
+      const img = item.images.standard_resolution.url;
+      const likes = item.likes.count;
+      const tags = item.tags;
+      const link = item.link;
+      const profile = item.user.username;
+      const location = item.location.name;
+      const caption = item.caption;
+      const profileImage = item.user.profile_picture;
+      return `<div class="swiper-slide">
+              <div class="slide-image" style="background-image: url(${img})"></div>
+              <div class="slide-info">
+               <div class="info-head">
+                 <div class="gradient-border">
+                  <div style="background-image: url(${profileImage})" class="head-icon"></div>
+                 </div>
+                 <div class="profile-wrapper">
+                   <span class="profile-name">${profile}</span>
+                   <span class="profile-location">${
+                     location ? location : ""
+                   }</span>
+                 </div>
+              </div>
+              <div class="info-caption">
+                <div class="caption-wrapper">
+                 <div class="gradient-border">
+                   <div style="background-image: url(${profileImage})" class="head-icon"></div>
+                 </div>
+                  <div class="profile-wrapper">
+                  <span class="profile-name">${profile}</span>
+                  <span class="profile-location">${
+                    caption ? item.caption.text.replace(/#(\S*)/g, "") : ""
+                  }</span>
+                   <span class="profile-createdat">
+                   ${
+                     caption
+                       ? moment(moment.unix(item.caption.created_time)).fromNow(
+                           true
+                         )
+                       : ""
+                   }
+                   </span>
+                  </div>
+                </div>
+              </div>
+            </div>  
+        </div>`;
+    });
+    mySwiper.appendSlide(formatedData);
+    mySwiper.update();
+    $("#next-btn").click(() => {
+      mySwiper.slideNext();
+    });
+    $("#prev-btn").click(() => {
+      mySwiper.slidePrev();
+    });
+  }
+  // mySwiper.appendSlide()
+  // var feed = new Instafeed({
+  //   accessToken: "445632943.be48457.f69642d8b6294d99882c2054efb091cd",
+  //   clientId: "be4845747d3446e9a005b51921a3505e",
+  //   get: "user",
+  //   addClass: "gallery-img",
+  //   userId: "445632943",
+  //   resolution: "low_resolution",
+  //   template: '<div class="swiper-slide"><img src="{{image}}"/></div>',
+  //   limit: 12,
+  //   target: "inst",
+  //   success: () => mySwiper.update()
+  // });
+  // feed.run();
+
+  //console.log(feed);
 });

@@ -1,0 +1,161 @@
+.reviews-section {
+  padding-top: 128px;
+  .swiper-container {
+    width: 100%;
+    .wrapper-actions {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 10;
+      height: 100%;
+      .container {
+        width: 100%;
+        height: 100%;
+        justify-content: space-between;
+        display: flex;
+        align-items: center;
+      }
+      .swiper-btn {
+        border: none;
+        padding: 0;
+        margin: 0;
+        &:focus {
+          outline: none;
+        }
+        min-width: 65px;
+        height: 65px;
+        width: 65px;
+        background-color: #fece0c;
+        display: flex;
+        border-radius: 32.5px;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        color: #1a1a1a;
+      }
+    }
+    .swiper-slide {
+      transition: 0.2;
+      &.prev-feed {
+        opacity: 0.75;
+        transform: scale(0.9);
+        transition: 0.2;
+      }
+      &.next-feed {
+        opacity: 0.75;
+        transform: scale(0.9);
+        transition: 0.2;
+      }
+      &.swiper-slide-active {
+        transition: 0.2s;
+      }
+      display: flex;
+      background-color: white;
+      width: 936px;
+      border-radius: 20px;
+      margin-top: 32px;
+      margin-bottom: 32px;
+      box-shadow: 0px 0px 22.5px 2.5px rgba(43, 52, 60, 0.15);
+      .slide-image {
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        width: 600px;
+        height: 600px;
+      }
+      .slide-info {
+        .info-caption {
+          padding: 14px;
+          display: flex;
+          flex-direction: column;
+          .caption-wrapper {
+            display: flex;
+            align-items: flex-start;
+            .profile-location {
+              max-width: 255px;
+            }
+            .profile-name {
+              margin-bottom: 4px;
+              display: block;
+            }
+            .profile-createdat {
+              display: block;
+              margin-top: 8px;
+              font-weight: 400;
+              color: #999;
+              font-size: 15px;
+              line-height: 18px;
+            }
+          }
+        }
+        .gradient-border {
+          margin-right: 8px;
+          border-radius: 21px;
+          background: #f09433;
+          background: -moz-linear-gradient(
+            45deg,
+            #f09433 0%,
+            #e6683c 25%,
+            #dc2743 50%,
+            #cc2366 75%,
+            #bc1888 100%
+          );
+          background: -webkit-linear-gradient(
+            45deg,
+            #f09433 0%,
+            #e6683c 25%,
+            #dc2743 50%,
+            #cc2366 75%,
+            #bc1888 100%
+          );
+          background: linear-gradient(
+            45deg,
+            #f09433 0%,
+            #e6683c 25%,
+            #dc2743 50%,
+            #cc2366 75%,
+            #bc1888 100%
+          );
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+        }
+        .head-icon {
+          margin: 2px;
+          border-radius: 16px;
+          width: 32px;
+          min-width: 32px;
+          height: 32px;
+          background-position: center center;
+          background-size: cover;
+        }
+        width: 335px;
+        .info-head {
+          width: 100%;
+          border-bottom: 1px solid #efefef;
+          padding: 0 14px;
+          height: 60px;
+          display: flex;
+          align-items: center;
+        }
+        .profile-location {
+          color: #262626;
+          line-height: 15px;
+          font-size: 12px;
+        }
+        .profile-wrapper {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .profile-name {
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 18px;
+          color: #262626;
+        }
+      }
+    }
+  }
+}

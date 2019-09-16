@@ -17,10 +17,39 @@
     outline: none;
   }
 }
-.notifyjs-bootstrap-error{
+.notifyjs-bootstrap-error {
   background-image: none;
 }
+#success-modal {
+  .sing-up-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .sign-btn {
+    cursor: pointer;
+    margin-top: 16px;
+    border: none;
+    height: 65px;
+    border-radius: 32.5px;
+    background-color: #fece0c;
+    font-weight: bold;
+    text-align: center;
+    width: 430px;
+    font-family: "OfficinaSansC";
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #1a1a1a;
+    letter-spacing: 1px;
+  }
+}
 .modal-content {
+  .modal-icon {
+    font-size: 169px;
+    text-align: center;
+    color: #5e82db;
+    margin-bottom: 24px;
+  }
   position: relative;
   .close {
     z-index: 50;
@@ -173,6 +202,8 @@
 .modal-lg {
   max-width: 1198px;
 }
+
+
 #slide-panel {
   position: fixed;
   width: 300px;
