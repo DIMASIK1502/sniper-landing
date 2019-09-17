@@ -1,3 +1,7 @@
+var config = null;
+var gallery = null;
+var type = "all";
+
 $(window).scroll(function() {
   var hT = $("#benefits").offset().top,
     hH = $("#benefits").outerHeight(),
@@ -13,6 +17,7 @@ $(window).scroll(function() {
     });
   }
 });
+
 sendMail = (title, body, cb) => {
   Email.send({
     SecureToken: "f33c7167-29a8-410c-aceb-fd914a44284d",
@@ -26,7 +31,11 @@ sendMail = (title, body, cb) => {
     }
   });
 };
-
+function setGallery(){
+  $('#aniimated-thumbnials').children().map((a)=>{
+    
+  })
+}
 function getInstagramInfo(userId) {
   return $.ajax({
     url: `https://api.instagram.com/v1/users/${userId}/media/recent`, // or /users/self/media/recent for Sandbox
@@ -44,9 +53,49 @@ function getInstagramInfo(userId) {
     }
   });
 }
+function mapInit() {
+  var myMap = new ymaps.Map("map", {
+    center: [55.76, 37.64],
+    zoom: 10,
+    controls: []
+  });
+  $.getJSON("/config.json", function(data) {
+    if (data) {
+      config = data;
+      console.log(config);
+      data.map.map(item =>
+        myMap.geoObjects.add(
+          new ymaps.Placemark(
+            item.points,
+            {
+              hintContent: item.title,
+              balloonContent: item.title
+            },
+            {
+              // Опции.
+              // Необходимо указать данный тип макета.
+              iconLayout: "default#image",
+              // Своё изображение иконки метки.
+              iconImageHref: "img/map-point.png",
+              // Размеры метки.
+              iconImageSize: [29, 47]
+            }
+          )
+        )
+      );
+    }
+  });
+}
 
 $(document).ready(async () => {
+  let $document = $(this);
+  $document.on("onCloseAfter.lg", function(event) {
+    $document.data("lightGallery").destroy(true);
+  });
+
+  ymaps.ready(mapInit);
   moment.locale("ru");
+
   const instagramData = await getInstagramInfo("8535532406");
   $("#callback-button").click(() => {
     const name = $("#input-name").val();
@@ -106,10 +155,6 @@ $(document).ready(async () => {
     scroll.animateScroll(0);
   });
 
-  lightGallery(document.getElementById("aniimated-thumbnials"), {
-    addClass: "gallery-imgddd",
-    thumbnail: true
-  });
   $("#hamburger-button").click(e => {
     $("#hamburger-button").toggleClass("show");
     $("#slide-panel").toggleClass("open");
@@ -126,10 +171,19 @@ $(document).ready(async () => {
     slidesPerView: "auto",
     spaceBetween: 72,
     slideNextClass: "next-feed",
-    slidePrevClass: "prev-feed"
+    slidePrevClass: "prev-feed",
+    breakpoints: {
+      1280: {
+        slidesPerView: 1,
+        spaceBetween: 30
+      },
+      440: {
+        allowSlidePrev: false,
+        allowSlideNext: false
+      }
+    }
   });
   if (instagramData) {
-    console.log(instagramData);
     const formatedData = instagramData.data.map((item, key) => {
       const img = item.images.standard_resolution.url;
       const likes = item.likes.count;
@@ -140,43 +194,45 @@ $(document).ready(async () => {
       const caption = item.caption;
       const profileImage = item.user.profile_picture;
       return `<div class="swiper-slide">
-              <div class="slide-image" style="background-image: url(${img})"></div>
-              <div class="slide-info">
-               <div class="info-head">
-                 <div class="gradient-border">
-                  <div style="background-image: url(${profileImage})" class="head-icon"></div>
-                 </div>
-                 <div class="profile-wrapper">
-                   <span class="profile-name">${profile}</span>
-                   <span class="profile-location">${
-                     location ? location : ""
-                   }</span>
-                 </div>
-              </div>
-              <div class="info-caption">
-                <div class="caption-wrapper">
-                 <div class="gradient-border">
-                   <div style="background-image: url(${profileImage})" class="head-icon"></div>
-                 </div>
-                  <div class="profile-wrapper">
-                  <span class="profile-name">${profile}</span>
-                  <span class="profile-location">${
-                    caption ? item.caption.text.replace(/#(\S*)/g, "") : ""
-                  }</span>
-                   <span class="profile-createdat">
-                   ${
-                     caption
-                       ? moment(moment.unix(item.caption.created_time)).fromNow(
-                           true
-                         )
-                       : ""
-                   }
-                   </span>
+                  <div class="slide-content">
+                  <div class="slide-image" style="background-image: url(${img})"></div>
+                  <div class="slide-info">
+                   <div class="info-head">
+                     <div class="gradient-border">
+                      <div style="background-image: url(${profileImage})" class="head-icon"></div>
+                     </div>
+                     <div class="profile-wrapper">
+                       <span class="profile-name">${profile}</span>
+                       <span class="profile-location">${
+                         location ? location : ""
+                       }</span>
+                     </div>
                   </div>
-                </div>
-              </div>
-            </div>  
-        </div>`;
+                  <div class="info-caption">
+                    <div class="caption-wrapper">
+                     <div class="gradient-border">
+                       <div style="background-image: url(${profileImage})" class="head-icon"></div>
+                     </div>
+                      <div class="profile-wrapper">
+                      <span class="profile-name">${profile}</span>
+                      <span class="profile-location">${
+                        caption ? item.caption.text.replace(/#(\S*)/g, "") : ""
+                      }</span>
+                       <span class="profile-createdat">
+                       ${
+                         caption
+                           ? moment(
+                               moment.unix(item.caption.created_time)
+                             ).fromNow(true)
+                           : ""
+                       }
+                       </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>  
+                  </div>
+              </div>`;
     });
     mySwiper.appendSlide(formatedData);
     mySwiper.update();
@@ -187,20 +243,4 @@ $(document).ready(async () => {
       mySwiper.slidePrev();
     });
   }
-  // mySwiper.appendSlide()
-  // var feed = new Instafeed({
-  //   accessToken: "445632943.be48457.f69642d8b6294d99882c2054efb091cd",
-  //   clientId: "be4845747d3446e9a005b51921a3505e",
-  //   get: "user",
-  //   addClass: "gallery-img",
-  //   userId: "445632943",
-  //   resolution: "low_resolution",
-  //   template: '<div class="swiper-slide"><img src="{{image}}"/></div>',
-  //   limit: 12,
-  //   target: "inst",
-  //   success: () => mySwiper.update()
-  // });
-  // feed.run();
-
-  //console.log(feed);
 });

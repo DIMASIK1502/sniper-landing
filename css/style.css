@@ -891,6 +891,16 @@
   padding-top: 128px;
 }
 
+.reviews-section .section-title {
+  text-align: center;
+  font-family: "OfficinaSansC";
+  font-weight: 900;
+  font-size: 48px;
+  color: #1a1a1a;
+  line-height: 60px;
+  margin-bottom: 16px;
+}
+
 .reviews-section .swiper-container {
   width: 100%;
 }
@@ -945,8 +955,17 @@
 }
 
 .reviews-section .swiper-container .swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-transition: 0.2;
   transition: 0.2;
+}
+
+.reviews-section .swiper-container .swiper-slide .slide-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1091,6 +1110,10 @@
 }
 
 .gallery-section .gallery-img {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
   position: relative;
 }
 
@@ -1235,6 +1258,30 @@
   color: #1a1a1a;
 }
 
+.map-section .map-wrapper {
+  padding: 0 32px;
+  position: relative;
+  margin-bottom: 64px;
+}
+
+.map-section .map-wrapper:after {
+  left: 4px;
+  top: 32px;
+  bottom: 32px;
+  right: 4px;
+  background-color: white;
+  border-radius: 20px;
+  content: "";
+  z-index: -1;
+  position: absolute;
+  -webkit-box-shadow: 0px 0px 22.5px 2.5px rgba(43, 52, 60, 0.15);
+          box-shadow: 0px 0px 22.5px 2.5px rgba(43, 52, 60, 0.15);
+}
+
+#map ymaps {
+  border-radius: 20px;
+}
+
 @media (max-width: 1440px) {
   .header-section {
     background-position-x: left, 168%;
@@ -1320,7 +1367,36 @@
   }
 }
 
+@media (max-width: 968px) {
+  .reviews-section .swiper-container .swiper-slide .slide-image {
+    width: 400px;
+    height: 450px;
+  }
+  .reviews-section .swiper-container .swiper-slide .slide-content {
+    width: auto;
+  }
+}
+
 @media (max-width: 834px) {
+  .reviews-section .swiper-container .swiper-slide .slide-content {
+    height: 472px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .reviews-section .swiper-container .swiper-slide .slide-content .slide-image,
+  .reviews-section .swiper-container .swiper-slide .slide-content .slide-info {
+    width: 100%;
+    max-width: 100%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+  }
+  .reviews-section .swiper-container .swiper-slide .slide-content .slide-image {
+    max-height: 256px;
+    border-radius: 20px 20px 0 0;
+  }
   #aniimated-thumbnials .gallery-img {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 25%;
@@ -1492,6 +1568,16 @@
 }
 
 @media (max-width: 667px) {
+  .reviews-section
+.swiper-container
+.swiper-slide
+.slide-info
+.info-caption
+.caption-wrapper
+.profile-location {
+    overflow: hidden;
+    max-height: 78px;
+  }
   .benefits-section .benefis-grid .grid-item {
     max-width: 100%;
     -webkit-box-flex: 0;
@@ -1504,6 +1590,9 @@
 }
 
 @media (max-width: 568px) {
+  .reviews-section .swiper-container .wrapper-actions .swiper-btn {
+    display: none;
+  }
   .modal-content .modal-form-subtitle {
     font-size: 16px;
     line-height: 16px;

@@ -75,8 +75,30 @@
     }
   }
 }
-
+@media (max-width: 968px) {
+  .reviews-section .swiper-container .swiper-slide .slide-image {
+    width: 400px;
+    height: 450px;
+  }
+  .reviews-section .swiper-container .swiper-slide .slide-content {
+    width: auto;
+  }
+}
 @media (max-width: 834px) {
+  .reviews-section .swiper-container .swiper-slide .slide-content {
+    height: 472px;
+    flex-direction: column;
+    .slide-image,
+    .slide-info {
+      width: 100%;
+      max-width: 100%;
+      flex: 0 0 100%;
+    }
+    .slide-image {
+      max-height: 256px;
+      border-radius: 20px 20px 0 0;
+    }
+  }
   #aniimated-thumbnials {
     .gallery-img {
       flex: 0 0 25%;
@@ -220,6 +242,16 @@
   }
 }
 @media (max-width: 667px) {
+  .reviews-section
+    .swiper-container
+    .swiper-slide
+    .slide-info
+    .info-caption
+    .caption-wrapper
+    .profile-location {
+    overflow: hidden;
+    max-height: 78px;
+  }
   .benefits-section .benefis-grid .grid-item {
     max-width: 100%;
     flex: 0 0 100%;
@@ -229,6 +261,9 @@
   }
 }
 @media (max-width: 568px) {
+  .reviews-section .swiper-container .wrapper-actions .swiper-btn {
+    display: none;
+  }
   .modal-content .modal-form-subtitle {
     font-size: 16px;
     line-height: 16px;

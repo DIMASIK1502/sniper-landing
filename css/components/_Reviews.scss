@@ -1,5 +1,14 @@
 .reviews-section {
   padding-top: 128px;
+  .section-title {
+    text-align: center;
+    font-family: "OfficinaSansC";
+    font-weight: 900;
+    font-size: 48px;
+    color: #1a1a1a;
+    line-height: 60px;
+    margin-bottom: 16px;
+  }
   .swiper-container {
     width: 100%;
     .wrapper-actions {
@@ -36,6 +45,17 @@
       }
     }
     .swiper-slide {
+      display: flex;
+      justify-content: center;
+      .slide-content {
+        display: flex;
+        background-color: white;
+        width: 936px;
+        border-radius: 20px;
+        margin-top: 32px;
+        margin-bottom: 32px;
+        box-shadow: 0px 0px 22.5px 2.5px rgba(43, 52, 60, 0.15);
+      }
       transition: 0.2;
       &.prev-feed {
         opacity: 0.75;
@@ -50,13 +70,6 @@
       &.swiper-slide-active {
         transition: 0.2s;
       }
-      display: flex;
-      background-color: white;
-      width: 936px;
-      border-radius: 20px;
-      margin-top: 32px;
-      margin-bottom: 32px;
-      box-shadow: 0px 0px 22.5px 2.5px rgba(43, 52, 60, 0.15);
       .slide-image {
         background-position: center center;
         background-size: cover;

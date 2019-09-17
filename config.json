@@ -1,0 +1,86 @@
+{
+  "gallery": [
+    {
+      "type": "group",
+      "smallImage": "/img/gallery/gallery_256_1.jpg",
+      "fullImage": "/img/gallery/gallery_full_1.jpg"
+    },
+    {
+      "type": "group",
+      "smallImage": "/img/gallery/gallery_256_2.jpg",
+      "fullImage": "/img/gallery/gallery_full_2.jpg"
+    },
+    {
+      "type": "group",
+      "smallImage": "/img/gallery/gallery_256_3.jpg",
+      "fullImage": "/img/gallery/gallery_full_3.jpg"
+    },
+    {
+      "type": "group",
+      "smallImage": "/img/gallery/gallery_256_4.jpg",
+      "fullImage": "/img/gallery/gallery_full_4.jpg"
+    },
+    {
+      "type": "group",
+      "smallImage": "/img/gallery/gallery_256_5.jpg",
+      "fullImage": "/img/gallery/gallery_full_5.jpg"
+    },
+    {
+      "type": "group",
+      "smallImage": "/img/gallery/gallery_256_6.jpg",
+      "fullImage": "/img/gallery/gallery_full_6.jpg"
+    },
+    {
+      "type": "group",
+      "smallImage": "/img/gallery/gallery_256_7.jpg",
+      "fullImage": "/img/gallery/gallery_full_1.jpg"
+    },
+    {
+      "type": "group",
+      "smallImage": "/img/gallery/gallery_256_7.jpg",
+      "fullImage": "/img/gallery/gallery_full_7.jpg"
+    }
+  ],
+  "map": [
+    {
+      "title": "СК Никольский 7-я верхняя линия,13",
+      "points": [55.772968, 37.883977]
+    },
+    {
+      "title": "Айс Парк Рязанский проспект,4 ст.9",
+      "points": [55.729212, 37.7457]
+    },
+    {
+      "title": "Айс Парк ул.Кржижановского, 31",
+      "points": [55.673228, 37.581435]
+    },
+    {
+      "title": "СК Вершина Шипиловский пр-д, 63, к.1",
+      "points": [55.600557, 37.706392]
+    },
+    {
+      "title": "Время спорта ул. Москворечье, 12 ст.4",
+      "points": [55.643864, 37.661222]
+    },
+    {
+      "title": "Локомотив ул.Большая Черкизовская, 125, стр. 4",
+      "points": [55.807246, 37.739582]
+    },
+    {
+      "title": "ЛЕДО ул.Юности, 1Б",
+      "points": [55.736594, 37.817201]
+    },
+    {
+      "title": "Реутов Арена Юбилейный просп., 43, Реутов",
+      "points": [55.752884, 37.874597]
+    },
+    {
+      "title": "ГРАД ТЦ Город Шоссе Энтузиастов, 12",
+      "points": [55.747459, 37.706825]
+    },
+    {
+      "title": "Академия льда 1-й Стрелецкий пр-д, 14",
+      "points": [55.798714, 37.609176]
+    }
+  ]
+}

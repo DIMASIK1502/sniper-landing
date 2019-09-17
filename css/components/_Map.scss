@@ -1,0 +1,24 @@
+.map-section {
+  .map-wrapper {
+    padding: 0 32px;
+    position: relative;
+    margin-bottom: 64px;
+    &:after {
+      left: 4px;
+      top: 32px;
+      bottom: 32px;
+      right: 4px;
+      background-color: white;
+      border-radius: 20px;
+      content: "";
+      z-index: -1;
+      position: absolute;
+      box-shadow: 0px 0px 22.5px 2.5px rgba(43, 52, 60, 0.15);
+    }
+  }
+}
+#map {
+  ymaps {
+    border-radius: 20px;
+  }
+}

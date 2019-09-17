@@ -1,6 +1,10 @@
 .gallery-section {
   padding-top: 128px;
   .gallery-img {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
     position: relative;
     &::after {
       transition: 0.2s;
