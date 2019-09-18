@@ -1,4 +1,6 @@
 {
+  "email": "dimasik1502@mail.ru",
+  "reviewTag": "*",
   "gallery": [
     {
       "type": "group",
@@ -33,12 +35,202 @@
     {
       "type": "group",
       "smallImage": "/img/gallery/gallery_256_7.jpg",
-      "fullImage": "/img/gallery/gallery_full_1.jpg"
+      "fullImage": "/img/gallery/gallery_full_7.jpg"
+    },
+    {
+      "type": "personal",
+      "smallImage": "/img/gallery/gallery_256_9.jpg",
+      "fullImage": "/img/gallery/gallery_full_9.jpg"
+    },
+    {
+      "type": "personal",
+      "smallImage": "/img/gallery/gallery_256_11.jpg",
+      "fullImage": "/img/gallery/gallery_full_11.jpg"
+    },
+    {
+      "type": "personal",
+      "smallImage": "/img/gallery/gallery_256_12.jpg",
+      "fullImage": "/img/gallery/gallery_full_12.jpg"
+    },
+    {
+      "type": "personal",
+      "smallImage": "/img/gallery/gallery_256_13.jpg",
+      "fullImage": "/img/gallery/gallery_full_13.jpg"
+    },
+    {
+      "type": "personal",
+      "smallImage": "/img/gallery/gallery_256_14.jpg",
+      "fullImage": "/img/gallery/gallery_full_14.jpg"
+    },
+    {
+      "type": "personal",
+      "smallImage": "/img/gallery/gallery_256_15.jpg",
+      "fullImage": "/img/gallery/gallery_full_15.jpg"
+    },
+    {
+      "type": "personal",
+      "smallImage": "/img/gallery/gallery_256_16.jpg",
+      "fullImage": "/img/gallery/gallery_full_16.jpg"
+    },
+    {
+      "type": "personal",
+      "smallImage": "/img/gallery/gallery_256_17.jpg",
+      "fullImage": "/img/gallery/gallery_full_17.jpg"
+    },
+    {
+      "type": "personal",
+      "smallImage": "/img/gallery/gallery_256_18.jpg",
+      "fullImage": "/img/gallery/gallery_full_18.jpg"
     },
     {
       "type": "group",
-      "smallImage": "/img/gallery/gallery_256_7.jpg",
-      "fullImage": "/img/gallery/gallery_full_7.jpg"
+      "smallImage": "/img/gallery/gallery_256_19.jpg",
+      "fullImage": "/img/gallery/gallery_full_19.jpg"
+    },
+    {
+      "type": "group",
+      "smallImage": "/img/gallery/gallery_256_20.jpg",
+      "fullImage": "/img/gallery/gallery_full_20.jpg"
+    },
+    {
+      "type": "group",
+      "smallImage": "/img/gallery/gallery_256_21.jpg",
+      "fullImage": "/img/gallery/gallery_full_21.jpg"
+    },
+    {
+      "type": "group",
+      "smallImage": "/img/gallery/gallery_256_22.jpg",
+      "fullImage": "/img/gallery/gallery_full_22.jpg"
+    },
+    {
+      "type": "group",
+      "smallImage": "/img/gallery/gallery_256_23.jpg",
+      "fullImage": "/img/gallery/gallery_full_23.jpg"
+    },
+    {
+      "type": "group",
+      "smallImage": "/img/gallery/gallery_256_24.jpg",
+      "fullImage": "/img/gallery/gallery_full_24.jpg"
+    },
+    {
+      "type": "group",
+      "smallImage": "/img/gallery/gallery_256_25.jpg",
+      "fullImage": "/img/gallery/gallery_full_25.jpg"
+    },
+    {
+      "type": "group",
+      "smallImage": "/img/gallery/gallery_256_26.jpg",
+      "fullImage": "/img/gallery/gallery_full_26.jpg"
+    },
+    {
+      "type": "group",
+      "smallImage": "/img/gallery/gallery_256_27.jpg",
+      "fullImage": "/img/gallery/gallery_full_27.jpg"
+    },
+    {
+      "type": "group",
+      "smallImage": "/img/gallery/gallery_256_28.jpg",
+      "fullImage": "/img/gallery/gallery_full_28.jpg"
+    },
+    {
+      "type": "group",
+      "smallImage": "/img/gallery/gallery_256_29.jpg",
+      "fullImage": "/img/gallery/gallery_full_29.jpg"
+    },
+    {
+      "type": "group",
+      "smallImage": "/img/gallery/gallery_256_30.jpg",
+      "fullImage": "/img/gallery/gallery_full_30.jpg"
+    },
+    {
+      "type": "group",
+      "smallImage": "/img/gallery/gallery_256_31.jpg",
+      "fullImage": "/img/gallery/gallery_full_31.jpg"
+    },
+    {
+      "type": "group",
+      "smallImage": "/img/gallery/gallery_256_32.jpg",
+      "fullImage": "/img/gallery/gallery_full_32.jpg"
+    },
+    {
+      "type": "group",
+      "smallImage": "/img/gallery/gallery_256_33.jpg",
+      "fullImage": "/img/gallery/gallery_full_33.jpg"
+    },
+    {
+      "type": "group",
+      "smallImage": "/img/gallery/gallery_256_34.jpg",
+      "fullImage": "/img/gallery/gallery_full_34.jpg"
+    },
+    {
+      "type": "group",
+      "smallImage": "/img/gallery/gallery_256_35.jpg",
+      "fullImage": "/img/gallery/gallery_full_35.jpg"
+    },
+    {
+      "type": "group",
+      "smallImage": "/img/gallery/gallery_256_36.jpg",
+      "fullImage": "/img/gallery/gallery_full_36.jpg"
+    },
+    {
+      "type": "group",
+      "smallImage": "/img/gallery/gallery_256_37.jpg",
+      "fullImage": "/img/gallery/gallery_full_37.jpg"
+    },
+    {
+      "type": "group",
+      "smallImage": "/img/gallery/gallery_256_38.jpg",
+      "fullImage": "/img/gallery/gallery_full_38.jpg"
+    },
+    {
+      "type": "group",
+      "smallImage": "/img/gallery/gallery_256_39.jpg",
+      "fullImage": "/img/gallery/gallery_full_39.jpg"
+    },
+    {
+      "type": "group",
+      "smallImage": "/img/gallery/gallery_256_40.jpg",
+      "fullImage": "/img/gallery/gallery_full_40.jpg"
+    },
+    {
+      "type": "group",
+      "smallImage": "/img/gallery/gallery_256_41.jpg",
+      "fullImage": "/img/gallery/gallery_full_41.jpg"
+    },
+    {
+      "type": "group",
+      "smallImage": "/img/gallery/gallery_256_42.jpg",
+      "fullImage": "/img/gallery/gallery_full_42.jpg"
+    },
+    {
+      "type": "group",
+      "smallImage": "/img/gallery/gallery_256_43.jpg",
+      "fullImage": "/img/gallery/gallery_full_43.jpg"
+    },
+    {
+      "type": "group",
+      "smallImage": "/img/gallery/gallery_256_44.jpg",
+      "fullImage": "/img/gallery/gallery_full_44.jpg"
+    },
+    {
+      "type": "group",
+      "smallImage": "/img/gallery/gallery_256_45.jpg",
+      "fullImage": "/img/gallery/gallery_full_45.jpg"
+    },
+    {
+      "type": "group",
+      "smallImage": "/img/gallery/gallery_256_46.jpg",
+      "fullImage": "/img/gallery/gallery_full_46.jpg"
+    },
+    {
+      "type": "group",
+      "smallImage": "/img/gallery/gallery_256_47.jpg",
+      "fullImage": "/img/gallery/gallery_full_47.jpg"
+    },
+    {
+      "type": "group",
+      "smallImage": "/img/gallery/gallery_256_48.jpg",
+      "fullImage": "/img/gallery/gallery_full_48.jpg"
     }
   ],
   "map": [

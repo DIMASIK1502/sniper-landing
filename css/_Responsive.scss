@@ -3,6 +3,11 @@
     background-position-x: left, 168%;
   }
 }
+@media (max-width: 1280px) {
+  .reviews-section .swiper-container .swiper-slide {
+    max-width: none;
+  }
+}
 @media (max-width: 1112px) {
   .header-section {
     background-position-x: left, 350%;

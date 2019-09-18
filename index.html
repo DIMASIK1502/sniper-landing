@@ -4,16 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" href="/img/favicon.png" type="image/png" />
     <link rel="stylesheet" href="./css/utils/bootstrap.min.css" />
     <link rel="stylesheet" href="./css/utils/swiper.min.css" />
-    <link rel="stylesheet" href="./css/utils/lightgallery.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.12/css/lightgallery.min.css"
+    />
     <link rel="stylesheet" href="./css/utils/lg-transitions.min.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <script
       src="https://api-maps.yandex.ru/2.1/?apikey=2cd2308f-ddfb-46cd-b5e3-b82bccafbbb9&lang=ru_RU"
       type="text/javascript"
     ></script>
-    <title>Document</title>
+    <title>Хоккейная школа «Снайпер»</title>
   </head>
   <body>
     <button id="up-button"><i class="fas fa-arrow-up"></i></button>
@@ -23,12 +27,26 @@
         <a data-scroll href="#types-of-training" class="nav-link"
           >Виды тренировок</a
         >
+
         <a data-scroll href="#trainers" class="nav-link">Тренеры</a>
         <a data-scroll href="#season-tickets" class="nav-link">Абонементы</a>
         <a data-scroll href="#reviews" class="nav-link">Отзывы</a>
         <a data-scroll href="#gallery" class="nav-link">Галерея</a>
         <a data-scroll href="#contacts" class="nav-link">Контакты</a>
       </div>
+      <button
+        data-toggle="modal"
+        data-target="#callback-modal"
+        class="callback-button"
+      >
+        <div class="button-icon">
+          <i class="fas fa-phone"></i>
+        </div>
+        <div class="button-content">
+          <span class="content-phone">+7 (987) 013-03-67</span>
+          <span class="content-subtitle">Заказать звонок</span>
+        </div>
+      </button>
     </div>
     <header class="header-section">
       <div class="container">
@@ -123,14 +141,19 @@
             Записаться на бесплатное занятие
           </button>
           <div class="social-links">
-            <a class="links-item">
+            <a
+              href="https://vk.com/sniper_ice"
+              target="_blank"
+              class="links-item"
+            >
               <i class="fab fa-vk"></i>
             </a>
-            <a class="links-item">
+            <a
+              href="https://www.instagram.com/sniper_hockey_school/"
+              target="_blank"
+              class="links-item"
+            >
               <i class="fab fa-instagram"></i>
-            </a>
-            <a class="links-item">
-              <i class="fab fa-youtube"></i>
             </a>
           </div>
         </div>
@@ -369,6 +392,7 @@
                     либо для более детальной работы над техникой
                   </span>
                   <button
+                    id="personal-modal-btn"
                     data-toggle="modal"
                     data-target="#sign-up-modal"
                     class="footer-button"
@@ -429,6 +453,7 @@
                     недочеты в тактической подготовке
                   </span>
                   <button
+                    id="group-modal-btn"
                     data-toggle="modal"
                     data-target="#sign-up-modal"
                     class="footer-button"
@@ -476,11 +501,15 @@
                   соревновательной деятельности юных хоккеистов»
                 </span>
                 <div class="info-contact">
-                  <div class="contact-vk">
+                  <a
+                    href="https://vk.com/id224695648"
+                    target="_blank"
+                    class="contact-vk"
+                  >
                     <i class="fab fa-vk"></i>
-                  </div>
+                  </a>
                   <div class="contact-phone">
-                    <span>+7 (900) 687-56-65</span>
+                    <span>+7 (996) 441-42-41</span>
                   </div>
                 </div>
               </div>
@@ -549,11 +578,15 @@
                   >4. Участник всероссийский финалов ЮХЛ</span
                 >
                 <div class="info-contact">
-                  <div class="contact-vk">
+                  <a
+                    href="https://vk.com/dvornikov22"
+                    target="_blank"
+                    class="contact-vk"
+                  >
                     <i class="fab fa-vk"></i>
-                  </div>
+                  </a>
                   <div class="contact-phone">
-                    <span>+7 (900) 687-56-65</span>
+                    <span>+7 (987) 013-03-67</span>
                   </div>
                 </div>
               </div>
@@ -581,6 +614,7 @@
                 <button
                   data-toggle="modal"
                   data-target="#sign-up-modal"
+                  id="once-modal-btn"
                   class="footer-button"
                 >
                   Записаться на занятие
@@ -605,6 +639,7 @@
               </div>
               <div class="card_footer">
                 <button
+                  id="four-modal-btn"
                   data-toggle="modal"
                   data-target="#sign-up-modal"
                   class="footer-button"
@@ -631,6 +666,7 @@
               </div>
               <div class="card_footer">
                 <button
+                  id="eight-modal-btn"
                   data-toggle="modal"
                   data-target="#sign-up-modal"
                   class="footer-button"
@@ -644,9 +680,9 @@
       </div>
     </section>
     <section class="reviews-section">
-        <div class="container">
-            <h2 class="section-title">Отзывы</h2>
-        </div>
+      <div class="container">
+        <h2 id="reviews" class="section-title">Отзывы</h2>
+      </div>
       <div class="swiper-container">
         <div class="swiper-wrapper" id="inst"></div>
         <div class="wrapper-actions">
@@ -666,9 +702,15 @@
         <div class="gallery-header">
           <h1 id="gallery" class="header-title">Галерея</h1>
           <div class="header-actions">
-            <button class="action-button">Все</button>
-            <button class="action-button">Персональные</button>
-            <button class="action-button active">Групповые</button>
+            <button id="gallery-btn-all" class="action-button active">
+              Все
+            </button>
+            <button id="gallery-btn-person" class="action-button">
+              Персональные
+            </button>
+            <button id="gallery-btn-group" class="action-button">
+              Групповые
+            </button>
           </div>
         </div>
       </div>
@@ -677,6 +719,9 @@
         data-responsive="img/1-375.jpg 375, img/1-480.jpg 480, img/1-757.jpg 757"
         class="row no-gutters"
       ></div>
+      <div class="container text-center">
+        <button id="show-more-btn"><span>Показать больше</span></button>
+      </div>
     </section>
     <footer>
       <section class="contacts-section">
@@ -696,14 +741,19 @@
                   <div class="contacts-info">
                     <span class="info-label">Мы в социальных сетях</span>
                     <div class="info-socials">
-                      <a class="socials-link">
+                      <a
+                        href="https://vk.com/sniper_ice"
+                        target="_blank"
+                        class="socials-link"
+                      >
                         <i class="fab fa-vk"></i>
                       </a>
-                      <a class="socials-link">
+                      <a
+                        href="https://www.instagram.com/sniper_hockey_school/"
+                        target="_blank"
+                        class="socials-link"
+                      >
                         <i class="fab fa-instagram"></i>
-                      </a>
-                      <a class="socials-link">
-                        <i class="fab fa-youtube"></i>
                       </a>
                     </div>
                     <p class="info-p"></p>
@@ -712,26 +762,23 @@
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                   <div class="contacts-info">
                     <span class="info-label">Наш E-mail</span>
-                    <a class="info-mail">sniper@mail.com</a>
+                    <a href="mailto:bauerxxii@yandex.ru" class="info-mail"
+                      >bauerxxii@yandex.ru</a
+                    >
                   </div>
                 </div>
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                   <div class="contacts-info">
                     <span class="info-label">Адреса катков</span>
-                    <p class="info-p">
-                      Реутов арена, Айс Парк (проф.+рязан.),<br />
-                      ТЦ город, Локомотив, шоссе энтузиастов,<br />
-                      Альпийский лед, Москворечье, Вершина,<br />
-                      Европейский, Никольское
-                    </p>
+                    <div class="info-address-list" id="address-list"></div>
                   </div>
                 </div>
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                   <div class="contacts-info">
                     <span class="info-label">Наш телефон</span>
-                    <p class="info-phone">
+                    <a href="tel:+79870130367" class="info-phone">
                       +7 (987) 013-03-67
-                    </p>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -746,6 +793,7 @@
           </div>
         </div>
       </section>
+      <h4 id="copyright">© 2019 sniperschool.ru. Все права защищены</h4>
     </footer>
     <div class="modal fade" id="success-modal" role="dialog">
       <div class="modal-dialog">
@@ -797,13 +845,13 @@
           <div class="row">
             <div class="col-6">
               <div class="sing-up-form">
-                <h2 class="modal-form-title">
+                <h2 class="modal-form-title" id="modal-title">
                   Сомневаетесь что мы<br />
                   именно те, кто вам нужен?
                 </h2>
                 <p class="modal-form-subtitle">
-                  Готовы доказать, что нам не всё равно и предложить<br />
-                  Вам пробное занятие
+                  Оставьте свои данные, и мы<br />
+                  свяжемся с вами в ближайшее время
                 </p>
                 <div class="modal-form-content">
                   <div class="input-wrapper">
@@ -920,9 +968,7 @@
     </div>
   </body>
   <script src="./js/libs/jquery.js"></script>
-  <script src="./js/libs/lightgallery.min.js"></script>
-  <script src="/js/libs/lg-thumbnail.min.js"></script>
-  <script src="./js/libs/lg-zoom.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.12/dist/js/lightgallery.min.js"></script>
   <script src="./js/libs/bootstrap.min.js"></script>
   <script src="./js/libs/swiper.min.js"></script>
   <script src="./js/libs/smooth-scroll.polyfills.min.js"></script>

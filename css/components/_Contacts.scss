@@ -14,6 +14,13 @@
       margin-bottom: 32px;
       display: flex;
       flex-direction: column;
+      .info-socials {
+        .socials-link {
+          &:not(:last-child) {
+           margin-right: 16px;
+          }
+        }
+      }
       .info-label {
         font-weight: bold;
         display: block;

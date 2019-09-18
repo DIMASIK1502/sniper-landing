@@ -12,6 +12,7 @@
   .swiper-container {
     width: 100%;
     .wrapper-actions {
+      pointer-events: none;
       position: absolute;
       top: 0;
       left: 0;
@@ -26,6 +27,8 @@
         align-items: center;
       }
       .swiper-btn {
+        cursor: pointer;
+        pointer-events: all;
         border: none;
         padding: 0;
         margin: 0;
@@ -45,8 +48,27 @@
       }
     }
     .swiper-slide {
+      max-width: 936px;
       display: flex;
       justify-content: center;
+      position: relative;
+
+      &.swiper-slide-active {
+        &:after {
+          z-index: -1;
+          content: "";
+          background-color: white;
+          left: -26px;
+          bottom: 82px;
+          top: 82px;
+          right: -26px;
+          -webkit-box-shadow: 0px 0px 22.5px 2.5px rgba(43, 52, 60, 0.15);
+          box-shadow: 0px 0px 22.5px 2.5px rgba(43, 52, 60, 0.15);
+          position: absolute;
+          transition: 0.2;
+          border-radius: 20px;
+        }
+      }
       .slide-content {
         display: flex;
         background-color: white;
@@ -58,11 +80,13 @@
       }
       transition: 0.2;
       &.prev-feed {
+        pointer-events: all;
         opacity: 0.75;
         transform: scale(0.9);
         transition: 0.2;
       }
       &.next-feed {
+        pointer-events: all;
         opacity: 0.75;
         transform: scale(0.9);
         transition: 0.2;

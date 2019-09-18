@@ -1,12 +1,14 @@
 .gallery-section {
   padding-top: 128px;
   .gallery-img {
+    cursor: pointer;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 300px;
     position: relative;
     &::after {
+      font-family: "Font Awesome Pro 5 Solid";
       transition: 0.2s;
       top: 0;
       left: 0;
@@ -14,7 +16,7 @@
       height: 100%;
       background-color: #fece0c;
       position: absolute;
-      content: "";
+      content: "\f00e";
       opacity: 0;
     }
     &:hover {
@@ -42,6 +44,7 @@
       display: flex;
       justify-content: flex-end;
       .action-button {
+        cursor: pointer;
         margin-left: 24px;
         &.active {
           background-color: #fece0c;

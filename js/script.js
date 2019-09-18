@@ -1,6 +1,9 @@
 var config = null;
 var gallery = null;
-var type = "all";
+var myMap = null;
+var showMore = false;
+var galleryType = "all";
+var modalType = "";
 
 $(window).scroll(function() {
   var hT = $("#benefits").offset().top,
@@ -18,10 +21,37 @@ $(window).scroll(function() {
   }
 });
 
-sendMail = (title, body, cb) => {
+function sendMail(title, body, cb) {
+  switch (modalType) {
+    case "1": {
+      body += `<p><b>Тип занятия: </b> разовое</p>`;
+      break;
+    }
+    case "4": {
+      body += `<p><b>Тип занятия: </b> 4 занятия</p>`;
+      break;
+    }
+    case "8": {
+      body += `<p><b>Тип занятия: </b> 8 занятий</p>`;
+      break;
+    }
+    case "personal": {
+      body += `<p><b>Тип занятия: </b> индивидуальное</p>`;
+      break;
+    }
+    case "group": {
+      body += `<p><b>Тип занятия: </b> групповое занятие</p>`;
+      break;
+    }
+    case "free": {
+      body += `<p><b>Тип занятия: </b> бесплатное</p>`;
+      break;
+    }
+  }
+
   Email.send({
     SecureToken: "f33c7167-29a8-410c-aceb-fd914a44284d",
-    To: "dimasik1502@mail.ru",
+    To: config.email,
     From: "dimasik.komarov.150298@gmail.com",
     Subject: title,
     Body: body
@@ -30,13 +60,41 @@ sendMail = (title, body, cb) => {
       cb && cb();
     }
   });
-};
-function setGallery(){
-  $('#aniimated-thumbnials').children().map((a)=>{
-    
-  })
 }
-function getInstagramInfo(userId) {
+function setGallery(type) {
+  galleryType = type;
+  $("#aniimated-thumbnials").empty();
+  const filteredList =
+    type === "all"
+      ? config.gallery
+      : config.gallery.filter(a => {
+          return a.type === type;
+        });
+  for (let i = 0; i < filteredList.length; i++) {
+    const item = filteredList[i];
+    const img = $("<a>", {
+      class: "gallery-img",
+      style: `background-image: url(${item.smallImage})`
+    });
+    img.click(() => {
+      $("#aniimated-thumbnials").lightGallery({
+        dynamic: true,
+        index: i,
+        dynamicEl: filteredList.map(a => {
+          return {
+            src: a.fullImage,
+            thumb: a.fullImage
+          };
+        })
+      });
+    });
+    $("#aniimated-thumbnials").append(img);
+    if (!showMore && i >= 17) {
+      break;
+    }
+  }
+}
+function getInstagramInfo(userId, cb) {
   return $.ajax({
     url: `https://api.instagram.com/v1/users/${userId}/media/recent`, // or /users/self/media/recent for Sandbox
     dataType: "jsonp",
@@ -46,6 +104,7 @@ function getInstagramInfo(userId) {
       count: 20
     },
     success: function(data) {
+      cb();
       return data.data;
     },
     error: function(data) {
@@ -53,50 +112,82 @@ function getInstagramInfo(userId) {
     }
   });
 }
+function getConfig() {
+  return $.getJSON("/config.json", function(data) {
+    config = data;
+  });
+}
 function mapInit() {
-  var myMap = new ymaps.Map("map", {
+  myMap = new ymaps.Map("map", {
     center: [55.76, 37.64],
     zoom: 10,
     controls: []
   });
-  $.getJSON("/config.json", function(data) {
-    if (data) {
-      config = data;
-      console.log(config);
-      data.map.map(item =>
-        myMap.geoObjects.add(
-          new ymaps.Placemark(
-            item.points,
-            {
-              hintContent: item.title,
-              balloonContent: item.title
-            },
-            {
-              // Опции.
-              // Необходимо указать данный тип макета.
-              iconLayout: "default#image",
-              // Своё изображение иконки метки.
-              iconImageHref: "img/map-point.png",
-              // Размеры метки.
-              iconImageSize: [29, 47]
-            }
-          )
-        )
-      );
-    }
+}
+function getPoints() {
+  config.map.map((item, key) => {
+    $("#address-list").append(`<span>${key + 1}. ${item.title}</span>`);
+    myMap.geoObjects.add(
+      new ymaps.Placemark(
+        item.points,
+        {
+          hintContent: item.title,
+          balloonContent: item.title
+        },
+        {
+          // Опции.
+          // Необходимо указать данный тип макета.
+          iconLayout: "default#image",
+          // Своё изображение иконки метки.
+          iconImageHref: "img/map-point.png",
+          // Размеры метки.
+          iconImageSize: [29, 47]
+        }
+      )
+    );
   });
 }
 
 $(document).ready(async () => {
-  let $document = $(this);
-  $document.on("onCloseAfter.lg", function(event) {
-    $document.data("lightGallery").destroy(true);
-  });
-
+  await getConfig();
   ymaps.ready(mapInit);
   moment.locale("ru");
+  $("#aniimated-thumbnials").on("onCloseAfter.lg", function(event) {
+    $("#aniimated-thumbnials")
+      .data("lightGallery")
+      .destroy(true);
+  });
+  const instagramData = await getInstagramInfo("8535532406", cb => {
+    setGallery("all");
+  });
+  $("#gallery-btn-all").click(e => {
+    setGallery("all");
+    $("#gallery-btn-person").removeClass("active");
+    $("#gallery-btn-group").removeClass("active");
+    $("#gallery-btn-all").toggleClass("active");
+  });
+  $("#gallery-btn-group").click(e => {
+    setGallery("group");
+    $("#gallery-btn-person").removeClass("active");
+    $("#gallery-btn-all").removeClass("active");
+    $("#gallery-btn-group").toggleClass("active");
+  });
+  $("#gallery-btn-person").click(e => {
+    setGallery("personal");
+    $("#gallery-btn-all").removeClass("active");
+    $("#gallery-btn-group").removeClass("active");
+    $("#gallery-btn-person").toggleClass("active");
+  });
+  $("#show-more-btn").click(e => {
+    showMore = !showMore;
+    if (showMore) {
+      $("#show-more-btn span").text("Скрыть");
+    } else {
+      $("#show-more-btn span").text("Показать больше");
+    }
+    setGallery(galleryType);
+  });
 
-  const instagramData = await getInstagramInfo("8535532406");
   $("#callback-button").click(() => {
     const name = $("#input-name").val();
     const phone = $("#input-callback-phone").val();
@@ -118,6 +209,31 @@ $(document).ready(async () => {
     }
     //sendMail()
   });
+  $("#sing-up-btn").click(() => {
+    modalType = "free";
+    $("#modal-title").html("Записаться на бесплатное занятие");
+  });
+  $("#personal-modal-btn").click(() => {
+    modalType = "presonal";
+    $("#modal-title").html("Записаться на индивидуальное занятие");
+  });
+  $("#group-modal-btn").click(() => {
+    modalType = "group";
+
+    $("#modal-title").html("Записаться на групповое занятие");
+  });
+  $("#once-modal-btn").click(() => {
+    modalType = "1";
+    $("#modal-title").html("Записаться на разовое занятие");
+  });
+  $("#four-modal-btn").click(() => {
+    modalType = "4";
+    $("#modal-title").html("Записаться на 4 занятия");
+  });
+  $("#eight-modal-btn").click(() => {
+    modalType = "8";
+    $("#modal-title").html("Записаться на 8 занятий");
+  });
   $("#sign-btn").click(() => {
     const name = $("#sign-input").val();
     const phone = $("#sign-phone").val();
@@ -130,7 +246,8 @@ $(document).ready(async () => {
           $("#sign-phone").val("");
           $("#sign-up-modal").modal("hide");
           $("#success-modal").modal("show");
-        }
+        },
+        "Беплатное занятие"
       );
     } else {
       $("#sign-btn").notify("Заполните все поля", {
@@ -175,7 +292,7 @@ $(document).ready(async () => {
     breakpoints: {
       1280: {
         slidesPerView: 1,
-        spaceBetween: 30
+        spaceBetween: 0
       },
       440: {
         allowSlidePrev: false,
@@ -183,19 +300,24 @@ $(document).ready(async () => {
       }
     }
   });
+
   if (instagramData) {
-    const formatedData = instagramData.data.map((item, key) => {
-      const img = item.images.standard_resolution.url;
-      const likes = item.likes.count;
-      const tags = item.tags;
-      const link = item.link;
-      const profile = item.user.username;
-      const location = item.location.name;
-      const caption = item.caption;
-      const profileImage = item.user.profile_picture;
-      return `<div class="swiper-slide">
+    const formatedData = instagramData.data
+      .filter(x =>
+        config.reviewTag === "*" ? true : x.tags.includes(config.reviewTag)
+      )
+      .map((item, key) => {
+        const img = item.images.standard_resolution.url;
+        const likes = item.likes.count;
+        const tags = item.tags;
+        const link = item.link;
+        const profile = item.user.username;
+        const location = item.location.name;
+        const caption = item.caption;
+        const profileImage = item.user.profile_picture;
+        return `<div class="swiper-slide">
                   <div class="slide-content">
-                  <div class="slide-image" style="background-image: url(${img})"></div>
+                  <a target="_blank" href="${link}" class="slide-image" style="background-image: url(${img})"></a>
                   <div class="slide-info">
                    <div class="info-head">
                      <div class="gradient-border">
@@ -233,7 +355,7 @@ $(document).ready(async () => {
                 </div>  
                   </div>
               </div>`;
-    });
+      });
     mySwiper.appendSlide(formatedData);
     mySwiper.update();
     $("#next-btn").click(() => {
@@ -243,4 +365,9 @@ $(document).ready(async () => {
       mySwiper.slidePrev();
     });
   }
+
+  $("#copyright").text(
+    `© ${new Date().getFullYear()} sniperschool.ru. Все права защищены`
+  );
+  getPoints();
 });
